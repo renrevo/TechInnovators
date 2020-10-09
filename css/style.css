@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+main {
+  position: relative;
+  height: 100vh;
+}
+
+.under-construction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
