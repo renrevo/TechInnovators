@@ -3,11 +3,12 @@ main {
 }
 
 .header {
-  max-width: 90rem;
-  margin: 0 auto;
+  background-color: #000022;
 }
 
 .header__wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,22 +24,57 @@ main {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
-.nav__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.brand a {
+  color: #ffffff;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
-.nav__item a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.75rem;
+.btn__menu {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.btn__menu i {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .btn__menu {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+  .nav__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__item {
+    white-space: nowrap;
+  }
+  .nav__item a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
