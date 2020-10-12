@@ -1,12 +1,44 @@
+@import '../scss/variables';
+
 main {
     position: relative;
-    height: 100vh;
 }
 
-.under-construction {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.header {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.brand {
+    font-family: $font-family-heading;
+    font-size: $t1;
+    font-weight: $font-weight-bold;
+}
+
+.nav {
+
+    &__items {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+
+        a {
+            text-decoration: none;
+            font-family: $font-family-text;
+            font-size: $t4;
+            font-weight: $font-weight-semiBold;
+            padding: $padding;
+        }
+
+    }
+
 }
