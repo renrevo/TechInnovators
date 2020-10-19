@@ -1,9 +1,57 @@
-main {
-  position: relative;
+@use '../variables';
+.btn__dark-mode-toggle {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  border: 2px solid transparent;
 }
 
-.header {
-  background-color: #000022;
+.theme__light .btn__dark-mode-toggle {
+  background-color: #f0f0f0;
+}
+
+.theme__dark .btn__dark-mode-toggle {
+  background-color: #000000;
+}
+
+.btn__dark-mode-toggle i {
+  font-size: 1.5rem;
+}
+
+.theme__light .btn__dark-mode-toggle i {
+  color: #000000;
+}
+
+.theme__dark .btn__dark-mode-toggle i {
+  color: #ffffff;
+}
+
+.btn__dark-mode-toggle:hover {
+  border: 2px solid #e0e0e0;
+}
+
+.btn__menu {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.btn__menu i {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.theme__light .header {
+  background-color: #f0f0f0;
+}
+
+.theme__dark .header {
+  background-color: #000000;
 }
 
 .header__wrapper {
@@ -29,25 +77,24 @@ main {
 }
 
 .brand a {
-  color: #ffffff;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
-.btn__menu {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+.theme__light .brand a {
+  color: #000000;
 }
 
-.btn__menu i {
-  font-size: 1.25rem;
+.theme__dark .brand a {
   color: #ffffff;
 }
 
 .nav {
   display: none;
+}
+
+main {
+  position: relative;
 }
 
 @media (min-width: 48rem) {
@@ -72,9 +119,14 @@ main {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    color: #ffffff;
     font-weight: 600;
     padding: 0.75rem;
+  }
+  .theme__light .nav__item a {
+    color: #000000;
+  }
+  .theme__dark .nav__item a {
+    color: #ffffff;
   }
 }
 /*# sourceMappingURL=style.css.map */

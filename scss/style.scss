@@ -1,11 +1,55 @@
 @import '../scss/variables';
+@import '../scss/utilities/themes';
 
-main {
-    position: relative;
+.btn {
+
+    &__dark-mode-toggle {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 2px solid transparent;
+
+        @include themify($themes) {
+            background-color: themed('backgroundColor');
+        }
+
+
+        i {
+            font-size: 1.5rem;
+
+            @include themify($themes) {
+                color: themed('textColor');
+            }
+        }
+
+        &:hover {
+            border: 2px solid #e0e0e0;
+        }
+
+    }
+
+    &__menu {
+        margin-left: $margin;
+        margin-right: $margin;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+
+        i {
+            font-size: $i3;
+            color: $color-white;
+        }
+
+    }
 }
 
 .header {
-    background-color: #000022;
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
 
     &__wrapper {
         max-width: 90rem;
@@ -25,31 +69,22 @@ main {
     margin-right: $margin;
 
     a {
-        color: $color-white;
         padding-top: $padding;
         padding-bottom: $padding;
-    }
 
-}
-
-.btn {
-
-    &__menu {
-        margin-left: $margin;
-        margin-right: $margin;
-        min-width: 2.5rem;
-        min-height: 2.5rem;
-
-        i {
-            font-size: $i3;
-            color: $color-white;
+        @include themify($themes) {
+            color: themed('textColor');
         }
-
     }
+
 }
 
 .nav {
     display: none;
+}
+
+main {
+    position: relative;
 }
 
 @media (min-width: 48rem) {
@@ -77,9 +112,13 @@ main {
                 text-decoration: none;
                 font-family: $font-family-text;
                 font-size: $t4;
-                color: $color-white;
                 font-weight: $font-weight-semiBold;
                 padding: $padding;
+
+                @include themify($themes) {
+                    color: themed('textColor');
+                }
+                
             }
 
         }
