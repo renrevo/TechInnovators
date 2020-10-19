@@ -4,10 +4,14 @@ $themes: (
     light: (
         backgroundColor: darken($color-white, 6),
         textColor: $color-black,
+        iconColor: $color-black,
+        borderColor: lighten($color-black, 24),
     ),
     dark: (
         backgroundColor: $color-black,
         textColor: $color-white,
+        iconColor: $color-white,
+        borderColor: darken($color-white, 24),
     ),
 );
 

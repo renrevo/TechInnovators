@@ -22,12 +22,19 @@
             font-size: 1.5rem;
 
             @include themify($themes) {
-                color: themed('textColor');
+                color: themed('iconColor');
             }
         }
 
         &:hover {
-            border: 2px solid #e0e0e0;
+            border-width: 2px;
+            border-style: solid;
+
+            @include themify($themes) {
+                border-color: themed('borderColor');
+            }
+
+            ;
         }
 
     }
@@ -40,7 +47,10 @@
 
         i {
             font-size: $i3;
-            color: $color-white;
+
+            @include themify($themes) {
+                color: themed('iconColor');
+            }
         }
 
     }
@@ -118,7 +128,7 @@ main {
                 @include themify($themes) {
                     color: themed('textColor');
                 }
-                
+
             }
 
         }

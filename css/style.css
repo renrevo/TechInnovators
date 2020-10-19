@@ -31,7 +31,16 @@
 }
 
 .btn__dark-mode-toggle:hover {
-  border: 2px solid #e0e0e0;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.theme__light .btn__dark-mode-toggle:hover {
+  border-color: #3d3d3d;
+}
+
+.theme__dark .btn__dark-mode-toggle:hover {
+  border-color: #c2c2c2;
 }
 
 .btn__menu {
@@ -43,6 +52,13 @@
 
 .btn__menu i {
   font-size: 1.25rem;
+}
+
+.theme__light .btn__menu i {
+  color: #000000;
+}
+
+.theme__dark .btn__menu i {
   color: #ffffff;
 }
 
