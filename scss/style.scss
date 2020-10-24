@@ -1,10 +1,12 @@
 @import '../scss/variables';
 @import '../scss/utilities/themes';
+@import '../scss/components/buttons';
 
 .btn {
 
     &__dark-mode-toggle {
-        position: absolute;
+        z-index: 1000;
+        position: fixed;
         bottom: 2rem;
         right: 2rem;
         width: 2.5rem;
@@ -24,6 +26,7 @@
             @include themify($themes) {
                 color: themed('iconColor');
             }
+
         }
 
         &:hover {
@@ -34,7 +37,6 @@
                 border-color: themed('borderColor');
             }
 
-            ;
         }
 
     }
@@ -54,16 +56,28 @@
         }
 
     }
+
+    &__enroll {
+        display: none;
+    }
+
 }
 
 .header {
-    @include themify($themes) {
-        background-color: themed('backgroundColor');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    transition: background-color 300ms ease-in-out;
+
+    &__solid {
+        @include themify($themes) {
+            background-color: themed('backgroundColor');
+        }
     }
 
     &__wrapper {
-        max-width: 90rem;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,9 +95,12 @@
     a {
         padding-top: $padding;
         padding-bottom: $padding;
+        color: $color-primary;
 
-        @include themify($themes) {
-            color: themed('textColor');
+        span {
+            @include themify($themes) {
+                color: themed('textColor');
+            }
         }
     }
 
@@ -97,12 +114,50 @@ main {
     position: relative;
 }
 
+.hero {
+    min-height: 100vh;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+
+}
+
+.other {
+    min-height: 130vh;
+}
+
 @media (min-width: 48rem) {
+
+    .header {
+
+        &__wrapper {
+            height: 4rem;
+            max-width: 90rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+
+    .brand {
+        margin-left: $margin * 2;
+        margin-right: $margin * 2;
+    }
 
     .btn {
 
         &__menu {
             display: none;
+        }
+
+        &__enroll {
+            display: block;
+            @include button-colored;
+            margin-left: $margin * 2;
+            margin-right: $margin * 2;
         }
 
     }

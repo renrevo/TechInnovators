@@ -1,6 +1,7 @@
 @use '../variables';
 .btn__dark-mode-toggle {
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   bottom: 2rem;
   right: 2rem;
   width: 2.5rem;
@@ -11,7 +12,7 @@
 }
 
 .theme__light .btn__dark-mode-toggle {
-  background-color: #f0f0f0;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .btn__dark-mode-toggle {
@@ -62,17 +63,29 @@
   color: #ffffff;
 }
 
-.theme__light .header {
-  background-color: #f0f0f0;
+.btn__enroll {
+  display: none;
 }
 
-.theme__dark .header {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.theme__light .header__solid {
+  background-color: #ebf5ff;
+}
+
+.theme__dark .header__solid {
   background-color: #000000;
 }
 
 .header__wrapper {
-  max-width: 90rem;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,13 +108,14 @@
 .brand a {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  color: #0080FF;
 }
 
-.theme__light .brand a {
+.theme__light .brand a span {
   color: #000000;
 }
 
-.theme__dark .brand a {
+.theme__dark .brand a span {
   color: #ffffff;
 }
 
@@ -113,9 +127,52 @@ main {
   position: relative;
 }
 
+.hero {
+  min-height: 100vh;
+}
+
+.theme__light .hero {
+  background-color: #ebf5ff;
+}
+
+.theme__dark .hero {
+  background-color: #000000;
+}
+
+.other {
+  min-height: 130vh;
+}
+
 @media (min-width: 48rem) {
+  .header__wrapper {
+    height: 4rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .brand {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
   .btn__menu {
     display: none;
+  }
+  .btn__enroll {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #0080FF;
+    color: #ffffff;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
   .nav {
     display: block;

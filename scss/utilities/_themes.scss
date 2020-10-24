@@ -2,7 +2,7 @@
 
 $themes: (
     light: (
-        backgroundColor: darken($color-white, 6),
+        backgroundColor: lighten($color-primary, 46),
         textColor: $color-black,
         iconColor: $color-black,
         borderColor: lighten($color-black, 24),
