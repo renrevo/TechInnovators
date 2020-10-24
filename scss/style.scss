@@ -69,7 +69,6 @@
     left: 0;
     right: 0;
     z-index: 9000;
-    transition: background-color 300ms ease-in-out;
 
     &__solid {
         @include themify($themes) {
@@ -116,9 +115,49 @@ main {
 
 .hero {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding * 6 $padding * 2;
 
     @include themify($themes) {
         background-color: themed('backgroundColor');
+    }
+
+    &__text {
+        margin-top: $margin * 2;
+        margin-bottom: $margin * 2;
+        text-align: center;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
+    }
+
+    &__heading {
+        line-height: 1;
+        font-size: 3rem;
+        font-weight: $font-weight-bold;
+        font-family: $font-family-heading;
+    }
+
+    &__description {
+        margin-top: $margin * 2;
+        line-height: 1.5;
+        font-size: $t3;
+        font-weight: $font-weight-medium;
+        font-family: $font-family-text;
+    }
+
+    &__illustration {
+        margin-top: $margin * 2;
+        margin-bottom: $margin * 2;
+
+        img {
+            width: 100%;
+        }
+
     }
 
 }
@@ -174,20 +213,73 @@ main {
             white-space: nowrap;
 
             a {
+                position: relative;
                 text-decoration: none;
                 font-family: $font-family-text;
                 font-size: $t4;
-                font-weight: $font-weight-semiBold;
+                font-weight: $font-weight-bold;
                 padding: $padding;
 
                 @include themify($themes) {
                     color: themed('textColor');
                 }
 
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: $padding;
+                    right: $padding;
+                    height: 2px;
+                    transform: scaleX(0);
+                    transition: transform 150ms ease-in-out;
+
+                    @include themify($themes) {
+                        background-color: themed('textColor');
+                    }
+
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+
             }
 
         }
 
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: $padding * 4;
+        padding-right: $padding * 4;
+
+        &__text {
+            width: 50%;
+            text-align: start;
+        }
+
+        &__heading {
+            font-size: 4rem;
+        }
+
+        &__description {
+            font-size: $t2;
+        }
+
+        &__illustration {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 84%;
+            }
+
+        }
     }
 
 }
