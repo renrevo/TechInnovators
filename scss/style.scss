@@ -42,8 +42,6 @@
     }
 
     &__menu {
-        margin-left: $margin;
-        margin-right: $margin;
         min-width: 2.5rem;
         min-height: 2.5rem;
 
@@ -63,23 +61,41 @@
 
 }
 
+.body {
+    display: grid;
+    grid-template-rows: 4rem auto 16rem;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9000;
+    grid-area: header;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
 
     &__solid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9000;
+
         @include themify($themes) {
             background-color: themed('backgroundColor');
         }
+
     }
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-left: $padding * 1.5;
+        padding-right: $padding * 1.5;
     }
 
 }
@@ -88,8 +104,6 @@
     font-family: $font-family-heading;
     font-size: $t1;
     font-weight: $font-weight-bold;
-    margin-left: $margin;
-    margin-right: $margin;
 
     a {
         padding-top: $padding;
@@ -97,10 +111,13 @@
         color: $color-primary;
 
         span {
+
             @include themify($themes) {
                 color: themed('textColor');
             }
+
         }
+
     }
 
 }
@@ -109,20 +126,27 @@
     display: none;
 }
 
-main {
+.main {
     position: relative;
+    grid-area: main;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+
+    &__wrapper {
+        padding-left: $padding * 1.5;
+        padding-right: $padding * 1.5;
+    }
+
 }
 
 .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: $padding * 6 $padding * 2;
-
-    @include themify($themes) {
-        background-color: themed('backgroundColor');
-    }
 
     &__text {
         margin-top: $margin * 2;
@@ -162,8 +186,14 @@ main {
 
 }
 
-.other {
-    min-height: 130vh;
+.footer {
+    grid-area: footer;
+    background-color: darken($color-primary, 42);
+
+    &__wrapper {
+        padding-left: $padding * 1.5;
+        padding-right: $padding * 1.5;
+    }
 }
 
 @media (min-width: 48rem) {
@@ -177,13 +207,10 @@ main {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-left: $padding * 3;
+            padding-right: $padding * 3;
         }
 
-    }
-
-    .brand {
-        margin-left: $margin * 2;
-        margin-right: $margin * 2;
     }
 
     .btn {
@@ -195,8 +222,6 @@ main {
         &__enroll {
             display: block;
             @include button-colored;
-            margin-left: $margin * 2;
-            margin-right: $margin * 2;
         }
 
     }
@@ -250,12 +275,19 @@ main {
 
     }
 
+    .main {
+
+        &__wrapper {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding-left: $padding * 3;
+            padding-right: $padding * 3;
+        }
+
+    }
+
     .hero {
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        padding-left: $padding * 4;
-        padding-right: $padding * 4;
 
         &__text {
             width: 50%;
@@ -280,6 +312,16 @@ main {
             }
 
         }
+
+    }
+
+    .footer {
+
+        &__wrapper {
+            padding-left: $padding * 3;
+            padding-right: $padding * 3;
+        }
+
     }
 
 }
