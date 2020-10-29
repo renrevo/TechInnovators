@@ -66,10 +66,11 @@
 }
 
 .body {
+  min-height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4rem auto 16rem;
-      grid-template-rows: 4rem auto 16rem;
+  -ms-grid-rows: auto auto 16rem;
+      grid-template-rows: auto auto 16rem;
       grid-template-areas: "header" "main" "footer";
 }
 
@@ -77,19 +78,6 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
-          box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
-}
-
-.theme__light .header {
-  background-color: #f5faff;
-}
-
-.theme__dark .header {
-  background-color: #002447;
-}
-
-.header__solid {
   position: fixed;
   top: 0;
   left: 0;
@@ -99,10 +87,14 @@
 
 .theme__light .header__solid {
   background-color: #f5faff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
 }
 
 .theme__dark .header__solid {
   background-color: #002447;
+  -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
+          box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
 }
 
 .header__wrapper {
@@ -222,6 +214,8 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+  grid-row-start: 3;
+  grid-row-end: 4;
   background-color: #001429;
 }
 
@@ -232,7 +226,6 @@
 
 @media (min-width: 48rem) {
   .header__wrapper {
-    height: 4rem;
     max-width: 90rem;
     margin: 0 auto;
     display: -webkit-box;
@@ -244,8 +237,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding: 0.75rem 2.25rem;
   }
   .btn__menu {
     display: none;
@@ -296,10 +288,10 @@
     height: 2px;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-    -webkit-transition: -webkit-transform 150ms ease-in-out;
-    transition: -webkit-transform 150ms ease-in-out;
-    transition: transform 150ms ease-in-out;
-    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 200ms ease-in-out;
+    transition: -webkit-transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   }
   .theme__light .nav__item a:after {
     background-color: #000000;

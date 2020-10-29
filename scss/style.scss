@@ -62,8 +62,9 @@
 }
 
 .body {
+    min-height: 100%;
     display: grid;
-    grid-template-rows: 4rem auto 16rem;
+    grid-template-rows: auto auto 16rem;
     grid-template-areas: "header"
         "main"
         "footer";
@@ -71,21 +72,17 @@
 
 .header {
     grid-area: header;
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
-
-    @include themify($themes) {
-        background-color: themed('backgroundColor');
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
 
     &__solid {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9000;
 
         @include themify($themes) {
             background-color: themed('backgroundColor');
+            box-shadow: themed('boxShadow');
         }
 
     }
@@ -142,6 +139,7 @@
 }
 
 .hero {
+    // min-height: calc(100vh - 3rem);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -188,6 +186,8 @@
 
 .footer {
     grid-area: footer;
+    grid-row-start: 3;
+    grid-row-end: 4;
     background-color: darken($color-primary, 42);
 
     &__wrapper {
@@ -201,14 +201,12 @@
     .header {
 
         &__wrapper {
-            height: 4rem;
             max-width: 90rem;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: $padding * 3;
-            padding-right: $padding * 3;
+            padding: $padding $padding * 3;
         }
 
     }
@@ -257,7 +255,7 @@
                     right: $padding;
                     height: 2px;
                     transform: scaleX(0);
-                    transition: transform 150ms ease-in-out;
+                    transition: transform 200ms ease-in-out;
 
                     @include themify($themes) {
                         background-color: themed('textColor');
