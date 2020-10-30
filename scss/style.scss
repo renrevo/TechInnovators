@@ -70,6 +70,24 @@
         "footer";
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 190;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+    display: none;
+}
+
 .header {
     grid-area: header;
     position: fixed;
@@ -79,10 +97,13 @@
     z-index: 9000;
     transition: box-shadow 500ms ease 0s;
 
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+
     &__solid {
 
         @include themify($themes) {
-            background-color: themed('backgroundColor');
             box-shadow: themed('boxShadow');
         }
 
@@ -120,8 +141,27 @@
 
 }
 
+.menu {
+    position: relative;
+}
+
 .nav {
-    display: none;
+    position: fixed;
+    top: 47px;
+    right: -12rem;
+    height: 100%;
+    white-space: nowrap;
+    width: 12rem;
+    transition: all 300ms ease-in-out;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+
+    &__active {
+        right: 0;
+    }
+
 }
 
 .main {
@@ -227,7 +267,7 @@
     }
 
     .nav {
-        display: block;
+        position: unset;
 
         &__items {
             display: flex;

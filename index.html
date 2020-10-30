@@ -13,19 +13,22 @@
 </head>
 
 <body class="body theme__light">
+    <div class="overlay hide"></div>
     <button id="dark-mode-toggle" class="btn__dark-mode-toggle"><i class="fas fa-adjust"></i></button>
     <header class="header">
         <div class="header__wrapper">
             <div class="brand"><a href="index.html"><span>Tech</span>Innovators</a></div>
-            <button class="btn__menu"><i class="fas fa-bars"></i></button>
-            <nav class="nav">
-                <ul class="nav__items">
-                    <li class="nav__item"><a href="#">Programs</a></li>
-                    <!-- <li class="nav__item"><a href="#">Curriculum</a></li> -->
-                    <!-- <li class="nav__item"><a href="#">Pricing</a></li> -->
-                    <li class="nav__item"><a href="#">About Us</a></li>
-                </ul>
-            </nav>
+            <div class="menu">
+                <button class="btn__menu" id="btn__menu"><i class="fas fa-bars"></i></button>
+                <nav class="nav">
+                    <ul class="nav__items">
+                        <li class="nav__item"><a href="#">Programs</a></li>
+                        <!-- <li class="nav__item"><a href="#">Curriculum</a></li> -->
+                        <!-- <li class="nav__item"><a href="#">Pricing</a></li> -->
+                        <li class="nav__item"><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
             <button class="btn__enroll">Book Free Trial Now</button>
         </div>
     </header>
@@ -52,6 +55,7 @@
 
     <script src="js/theme.js"></script>
     <script src="js/transparent-to-solid-header.js"></script>
+    <script src="js/hamburger-toggler.js"></script>
 </body>
 
 </html>
