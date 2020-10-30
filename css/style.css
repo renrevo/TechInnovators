@@ -83,6 +83,10 @@
   left: 0;
   right: 0;
   z-index: 9000;
+  -webkit-transition: -webkit-box-shadow 500ms ease 0s;
+  transition: -webkit-box-shadow 500ms ease 0s;
+  transition: box-shadow 500ms ease 0s;
+  transition: box-shadow 500ms ease 0s, -webkit-box-shadow 500ms ease 0s;
 }
 
 .theme__light .header__solid {
@@ -170,6 +174,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .hero__text {
