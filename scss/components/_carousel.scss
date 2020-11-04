@@ -1,0 +1,112 @@
+@import '../variables';
+
+@mixin carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 24rem;
+
+    &__slides {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transition: transform 1200ms ease-in-out;
+    }
+
+    &__slide {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__button-group {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+
+    &__nav {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        margin-bottom: $margin;
+    }
+
+    @media (min-width: 48rem) {
+        height: 36rem;
+
+        &__button-group {
+            padding-left: $padding * 3;
+            padding-right: $padding * 3;
+        }
+
+        &__nav {
+            margin-bottom: $margin * 2;
+        }
+
+    }
+
+}
+
+@mixin carousel-button {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba($color-black, 0.48);
+    border: $border-medium solid rgba($color-white, .48);
+
+    &:hover {
+        background-color: rgba($color-black, 0.72);
+        border: $border-medium solid rgba($color-white, .72);
+    }
+
+    i {
+        font-size: $i3;
+        color: $color-white;
+    }
+
+    &--right {
+        margin-left: auto;
+    }
+
+}
+
+;
+
+@mixin carousel-indicator {
+    cursor: pointer;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-left: $margin * 0.5;
+    margin-right: $margin * 0.5;
+    background-color: rgba($color-black, 0.48);
+    border: $border-medium solid rgba($color-white, .48);
+
+    &:hover {
+        background-color: rgba($color-black, 0.72);
+        border: $border-medium solid rgba($color-white, .72);
+    }
+
+}
+
+@mixin current-indicator {
+    background-color: $color-black;
+    border: $border-medium solid $color-white;
+}

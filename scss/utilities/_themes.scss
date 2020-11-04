@@ -2,18 +2,22 @@
 
 $themes: (
     light: (
-        backgroundColor: lighten($color-primary, 48),
+        backgroundColorPrimary: lighten($color-primary, 46),
+        backgroundColorSecondary: $color-white,
+        backgroundColorTertiary: darken($color-primary, 24),
         textColor: $color-black,
         iconColor: $color-black,
         borderColor: lighten($color-black, 24),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.24),
     ),
     dark: (
-        backgroundColor: darken($color-primary, 36),
+        backgroundColorPrimary: darken($color-primary, 42),
+        backgroundColorSecondary: darken($color-primary, 36),
+        backgroundColorTertiary: darken($color-primary, 48),
         textColor: $color-white,
         iconColor: $color-white,
         borderColor: darken($color-white, 24),
-        boxShadow: 0 3px 6px rgba(255, 255, 255, 0.24),
+        boxShadow: 0 3px 6px rgba(0, 0, 0, 0.48),
     ),
 );
 

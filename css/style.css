@@ -12,11 +12,11 @@
 }
 
 .theme__light .btn__dark-mode-toggle {
-  background-color: #f5faff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .btn__dark-mode-toggle {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .btn__dark-mode-toggle i {
@@ -65,46 +65,8 @@
   display: none;
 }
 
-.btn__carousel {
-  cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.48);
-  border: 2px solid rgba(255, 255, 255, 0.48);
-}
-
-.btn__carousel:hover {
-  background-color: rgba(0, 0, 0, 0.72);
-  border: 2px solid rgba(255, 255, 255, 0.72);
-}
-
-.btn__carousel i {
-  font-size: 1.25rem;
-  color: #ffffff;
-}
-
-.btn__carousel--right {
-  margin-left: auto;
-}
-
-.btn__indicator {
-  cursor: pointer;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  background-color: rgba(0, 0, 0, 0.48);
-  border: 2px solid rgba(255, 255, 255, 0.48);
-}
-
-.btn__indicator:hover {
-  background-color: rgba(0, 0, 0, 0.72);
-  border: 2px solid rgba(255, 255, 255, 0.72);
-}
-
 .body {
+  font-family: "Montserrat", sans-serif;
   min-height: 100%;
   display: -ms-grid;
   display: grid;
@@ -147,11 +109,11 @@
 }
 
 .theme__light .header {
-  background-color: #f5faff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .header {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .theme__light .header__solid {
@@ -160,8 +122,8 @@
 }
 
 .theme__dark .header__solid {
-  -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
-          box-shadow: 0 3px 6px rgba(255, 255, 255, 0.24);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.48);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.48);
 }
 
 .header__wrapper {
@@ -174,13 +136,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .brand {
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -214,11 +176,11 @@
 }
 
 .theme__light .nav {
-  background-color: #f5faff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .nav {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .nav__active {
@@ -232,20 +194,20 @@
   grid-area: main;
 }
 
-.theme__light .main {
-  background-color: #f5faff;
-}
-
-.theme__dark .main {
-  background-color: #002447;
-}
-
-.main__wrapper {
+.content-container {
   padding-left: 1.125rem;
   padding-right: 1.125rem;
 }
 
-.hero {
+.theme__light .hero {
+  background-color: #ebf5ff;
+}
+
+.theme__dark .hero {
+  background-color: #001429;
+}
+
+.hero__wrapper {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,74 +264,73 @@
   width: 100%;
 }
 
-.carousel {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: 24rem;
+.section__heading {
+  margin-bottom: 2.25rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.carousel__slides {
-  position: relative;
+.features {
+  height: 20rem;
+}
+
+.theme__light .features {
+  background-color: #ffffff;
+}
+
+.theme__dark .features {
+  background-color: #002447;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-column-gap: 2rem;
+}
+
+.advantages {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.theme__light .advantages {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.theme__dark .advantages {
+  background-color: #002447;
+  color: #ffffff;
+}
+
+.advantage {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.advantage__cards {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 3rem;
+}
+
+.advantage__illustration img {
+  width: 100%;
   height: 100%;
-  width: 100%;
-  -webkit-transition: -webkit-transform 1200ms ease-in-out;
-  transition: -webkit-transform 1200ms ease-in-out;
-  transition: transform 1200ms ease-in-out;
-  transition: transform 1200ms ease-in-out, -webkit-transform 1200ms ease-in-out;
 }
 
-.carousel__slide {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
-.carousel__slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.carousel__button-group {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.carousel__nav {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  bottom: 0;
+.advantage__heading {
+  margin-top: 2.25rem;
   margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.current-indicator {
-  background-color: #000000;
-  border: 2px solid #ffffff;
-}
-
-.hidden {
-  display: none;
+.advantage__explanation {
+  font-size: 1rem;
 }
 
 .footer {
@@ -378,7 +339,14 @@
   grid-area: footer;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #001429;
+}
+
+.theme__light .footer {
+  background-color: #004385;
+}
+
+.theme__dark .footer {
+  background-color: #00050a;
 }
 
 .footer__wrapper {
@@ -399,7 +367,6 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0.75rem 2.25rem;
   }
   .btn__menu {
     display: none;
@@ -466,13 +433,13 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  .main__wrapper {
+  .content-container {
     max-width: 90rem;
     margin: 0 auto;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
-  .hero {
+  .hero__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -500,15 +467,17 @@
   .hero__illustration img {
     width: 84%;
   }
-  .carousel {
-    height: 36rem;
+  .advantages {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  .carousel__button-group {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+  .advantage__cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
   }
-  .carousel__nav {
-    margin-bottom: 1.5rem;
+  .advantage__illustration {
+    height: 8rem;
   }
   .footer__wrapper {
     padding-left: 2.25rem;

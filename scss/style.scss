@@ -1,6 +1,7 @@
 @import '../scss/variables';
 @import '../scss/utilities/themes';
 @import '../scss/components/buttons';
+@import '../scss/components/carousel';
 
 .btn {
 
@@ -16,7 +17,7 @@
         border: 2px solid transparent;
 
         @include themify($themes) {
-            background-color: themed('backgroundColor');
+            background-color: themed('backgroundColorPrimary');
         }
 
 
@@ -59,50 +60,18 @@
         display: none;
     }
 
-    &__carousel {
-        cursor: pointer;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        background-color: rgba($color-black, 0.48);
-        border: $border-medium solid rgba($color-white, .48);
+    // &__carousel {
+    //     @include carousel-button;
+    // }
 
-        &:hover {
-            background-color: rgba($color-black, 0.72);
-            border: $border-medium solid rgba($color-white, .72);
-        }
-
-        i {
-            font-size: $i3;
-            color: $color-white;
-        }
-
-        &--right {
-            margin-left: auto;
-        }
-
-    }
-
-    &__indicator {
-        cursor: pointer;
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        margin-left: $margin * 0.5;
-        margin-right: $margin * 0.5;
-        background-color: rgba($color-black, 0.48);
-        border: $border-medium solid rgba($color-white, .48);
-
-        &:hover {
-            background-color: rgba($color-black, 0.72);
-            border: $border-medium solid rgba($color-white, .72);
-        }
-
-    }
+    // &__indicator {
+    //     @include carousel-indicator;
+    // }
 
 }
 
 .body {
+    font-family: $font-family-text;
     min-height: 100%;
     display: grid;
     grid-template-rows: auto auto 16rem;
@@ -139,7 +108,7 @@
     transition: box-shadow 500ms ease 0s;
 
     @include themify($themes) {
-        background-color: themed('backgroundColor');
+        background-color: themed('backgroundColorPrimary');
     }
 
     &__solid {
@@ -154,15 +123,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: $padding * 1.5;
-        padding-right: $padding * 1.5;
+        padding-top: $padding;
+        padding-bottom: $padding;
     }
 
 }
 
 .brand {
     font-family: $font-family-heading;
-    font-size: $t1;
+    font-size: $t2;
     font-weight: $font-weight-bold;
 
     a {
@@ -196,7 +165,7 @@
     transition: all 300ms ease-in-out;
 
     @include themify($themes) {
-        background-color: themed('backgroundColor');
+        background-color: themed('backgroundColorPrimary');
     }
 
     &__active {
@@ -208,26 +177,29 @@
 .main {
     position: relative;
     grid-area: main;
+}
+
+.content-container {
+    padding-left: $padding * 1.5;
+    padding-right: $padding * 1.5;
+}
+
+
+.hero {
 
     @include themify($themes) {
-        background-color: themed('backgroundColor');
+        background-color: themed('backgroundColorPrimary');
     }
 
     &__wrapper {
-        padding-left: $padding * 1.5;
-        padding-right: $padding * 1.5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: $padding * 6;
+        padding-bottom: $padding * 6;
     }
-
-}
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: $padding * 6;
-    padding-bottom: $padding * 6;
 
     &__text {
         margin-top: $margin * 2;
@@ -267,69 +239,93 @@
 
 }
 
-.carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 24rem;
+.section {
 
-    &__slides {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        transition: transform 1200ms ease-in-out;
+    &__heading {
+        margin-bottom: $margin * 3;
+        text-align: center;
+        font-size: $t2;
+        font-weight: $font-weight-bold;
+    }
+}
+
+.features {
+    height: 20rem;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
     }
 
-    &__slide {
-        height: 100%;
-        position: absolute;
-        width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-column-gap: 2rem;
+}
+
+.advantages {
+    padding-top: $padding * 3;
+    padding-bottom: $padding * 3;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+        color: themed('textColor');
+    }
+
+}
+
+.advantage {
+    text-align: center;
+    padding: $padding;
+
+    &__cards {
+        display: grid;
+        grid-row-gap: 3rem;
+    }
+
+    &__illustration {
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
 
     }
 
-    &__button-group {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        display: flex;
-        padding-left: $padding;
-        padding-right: $padding;
-    }
-
-    &__nav {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        bottom: 0;
+    &__heading {
+        margin-top: $margin * 3;
         margin-bottom: $margin;
+        font-size: $t3;
+        font-weight: $font-weight-bold;
+    }
+
+    &__explanation {
+        font-size: $t4;
     }
 
 }
 
-.current-indicator {
-    background-color: $color-black;
-    border: $border-medium solid $color-white;
-}
+// .carousel {
+//     @include carousel;
+// }
 
-.hidden {
-    display: none;
-}
+// .current-indicator {
+//     @include current-indicator;
+// }
+
+// .hidden {
+//     display: none;
+// }
 
 .footer {
     grid-area: footer;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-color: darken($color-primary, 42);
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorTertiary');
+    }
 
     &__wrapper {
         padding-left: $padding * 1.5;
@@ -348,7 +344,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: $padding $padding * 3;
         }
 
     }
@@ -416,19 +411,18 @@
 
     }
 
-    .main {
-
-        &__wrapper {
-            max-width: 90rem;
-            margin: 0 auto;
-            padding-left: $padding * 3;
-            padding-right: $padding * 3;
-        }
-
+    .content-container {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding-left: $padding * 3;
+        padding-right: $padding * 3;
     }
 
     .hero {
-        flex-direction: row;
+
+        &__wrapper {
+            flex-direction: row;
+        }
 
         &__text {
             width: 50%;
@@ -456,18 +450,21 @@
 
     }
 
-    .carousel {
-        height: 36rem;
+    .advantages {
+        padding-top: $padding * 4;
+        padding-bottom: $padding * 4;
+    }
 
-        &__button-group {
-            padding-left: $padding * 3;
-            padding-right: $padding * 3;
+    .advantage {
+
+        &__cards {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 2rem;
         }
 
-        &__nav {
-            margin-bottom: $margin * 2;
+        &__illustration {
+            height: 8rem;
         }
-
     }
 
     .footer {
