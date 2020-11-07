@@ -70,8 +70,8 @@
   min-height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto 16rem;
-      grid-template-rows: auto auto 16rem;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
       grid-template-areas: "header" "main" "footer";
 }
 
@@ -339,10 +339,11 @@
   grid-area: footer;
   grid-row-start: 3;
   grid-row-end: 4;
+  color: #ffffff;
 }
 
 .theme__light .footer {
-  background-color: #004385;
+  background-color: #002447;
 }
 
 .theme__dark .footer {
@@ -350,8 +351,88 @@
 }
 
 .footer__wrapper {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 3rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.footer__section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.social__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__link a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  margin-right: 0.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.social__link a i {
+  font-size: 1.5rem;
+}
+
+.social__link a:hover {
+  background-color: #ffffff;
+}
+
+.social__youtube:hover {
+  color: #C4302B;
+}
+
+.social__facebook:hover {
+  color: #3b5998;
+}
+
+.social__twitter:hover {
+  color: #00acee;
+}
+
+.social__linkedin:hover {
+  color: #2867b2;
+}
+
+.company__link {
+  margin-top: 0.75rem;
+}
+
+.company__link a {
+  color: #ffffff;
+}
+
+.social,
+.company {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.contact p {
+  color: #ffffff;
+  margin-top: 0.75rem;
 }
 
 @media (min-width: 48rem) {
@@ -480,8 +561,14 @@
     height: 8rem;
   }
   .footer__wrapper {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .social,
+  .company {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
