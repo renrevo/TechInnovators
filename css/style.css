@@ -37,11 +37,11 @@
 }
 
 .theme__light .btn__dark-mode-toggle:hover {
-  border-color: #3d3d3d;
+  border-color: #b8b8b8;
 }
 
 .theme__dark .btn__dark-mode-toggle:hover {
-  border-color: #c2c2c2;
+  border-color: #474747;
 }
 
 .btn__menu {
@@ -166,11 +166,13 @@
 
 .nav {
   position: fixed;
-  top: 47px;
+  top: 4rem;
   right: -12rem;
   height: 100%;
   white-space: nowrap;
   width: 12rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -185,6 +187,33 @@
 
 .nav__active {
   right: 0;
+}
+
+.nav__item {
+  line-height: 3;
+  text-align: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.theme__light .nav__item {
+  border-color: #b8b8b8;
+}
+
+.theme__dark .nav__item {
+  border-color: #474747;
+}
+
+.theme__light .nav__item a {
+  color: #000000;
+}
+
+.theme__dark .nav__item a {
+  color: #ffffff;
 }
 
 .main {
@@ -418,6 +447,8 @@
 
 .company__link {
   margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .company__link a {
@@ -431,8 +462,10 @@
 }
 
 .contact p {
-  color: #ffffff;
   margin-top: 0.75rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 @media (min-width: 48rem) {
@@ -464,6 +497,8 @@
   .nav {
     position: unset;
     background-color: transparent !important;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .nav__items {
     display: -webkit-box;
@@ -475,6 +510,7 @@
   }
   .nav__item {
     white-space: nowrap;
+    border-bottom: none;
   }
   .nav__item a {
     position: relative;

@@ -174,11 +174,13 @@
 
 .nav {
     position: fixed;
-    top: 47px;
+    top: 4rem;
     right: -12rem;
     height: 100%;
     white-space: nowrap;
     width: 12rem;
+    padding-top: $padding * 2;
+    padding-bottom: $padding * 2;
     transition: all 300ms ease-in-out;
 
     @include themify($themes) {
@@ -187,6 +189,30 @@
 
     &__active {
         right: 0;
+    }
+
+    &__item {
+        line-height: 3;
+        text-align: center;
+        padding-left: $padding;
+        padding-right: $padding;
+        font-size: $t4;
+        font-weight: $font-weight-semiBold;
+        border-bottom-width: $border-thin;
+        border-bottom-style: solid;
+        
+        @include themify($themes) {
+            border-color: themed('borderColor');
+        }
+
+        a {
+            
+            @include themify($themes) {
+                color: themed('textColor');
+            }
+
+        }
+
     }
 
 }
@@ -430,6 +456,8 @@
 
     &__link {
         margin-top: $margin;
+        font-size: $t5;
+        font-weight: $font-weight-medium;
 
         a {
             color: $color-white;
@@ -448,8 +476,10 @@
 .contact {
 
     p {
-        color: $color-white;
         margin-top: $margin;
+        color: $color-white;
+        font-size: $t5;
+        font-weight: $font-weight-medium;
     }
 
 }
@@ -484,6 +514,8 @@
     .nav {
         position: unset;
         background-color: transparent !important;
+        padding-top: 0;
+        padding-bottom: 0;
 
         &__items {
             display: flex;
@@ -492,6 +524,7 @@
 
         &__item {
             white-space: nowrap;
+            border-bottom: none;
 
             a {
                 position: relative;

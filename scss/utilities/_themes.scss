@@ -7,7 +7,7 @@ $themes: (
         backgroundColorTertiary: darken($color-primary, 36),
         textColor: $color-black,
         iconColor: $color-black,
-        borderColor: lighten($color-black, 24),
+        borderColor: lighten($color-black, 72),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.24),
     ),
     dark: (
@@ -16,7 +16,7 @@ $themes: (
         backgroundColorTertiary: darken($color-primary, 48),
         textColor: $color-white,
         iconColor: $color-white,
-        borderColor: darken($color-white, 24),
+        borderColor: darken($color-white, 72),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.48),
     ),
 );
