@@ -200,13 +200,13 @@
         font-weight: $font-weight-semiBold;
         border-bottom-width: $border-thin;
         border-bottom-style: solid;
-        
+
         @include themify($themes) {
             border-color: themed('borderColor');
         }
 
         a {
-            
+
             @include themify($themes) {
                 color: themed('textColor');
             }
@@ -290,6 +290,7 @@
         font-size: $t2;
         font-weight: $font-weight-bold;
     }
+
 }
 
 .features {
@@ -384,6 +385,31 @@
         margin-bottom: $margin * 2;
     }
 
+    &__bottom {
+        padding-top: $padding;
+        padding-bottom: $padding;
+        border-top: $border-thin solid $color-white;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+
+    &__link {
+
+        a {
+            color: $color-white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
 }
 
 .social {
@@ -461,6 +487,11 @@
 
         a {
             color: $color-white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
         }
 
     }

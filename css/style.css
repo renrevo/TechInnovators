@@ -393,6 +393,28 @@
   margin-bottom: 1.5rem;
 }
 
+.footer__bottom {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top: 1px solid #ffffff;
+}
+
+.footer__links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+.footer__link a {
+  color: #ffffff;
+}
+
+.footer__link a:hover {
+  text-decoration: underline;
+}
+
 .social__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,6 +475,10 @@
 
 .company__link a {
   color: #ffffff;
+}
+
+.company__link a:hover {
+  text-decoration: underline;
 }
 
 .social,

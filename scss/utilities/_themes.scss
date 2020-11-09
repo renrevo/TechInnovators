@@ -18,7 +18,7 @@ $themes: (
         iconColor: $color-white,
         borderColor: darken($color-white, 72),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.48),
-    ),
+    ), 
 );
 
 @mixin themify($themes) {
