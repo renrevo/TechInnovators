@@ -407,6 +407,11 @@
   grid-column-gap: 2rem;
 }
 
+.footer__link {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
 .footer__link a {
   color: #ffffff;
 }
