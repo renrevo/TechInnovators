@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#f4f4f4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,24 +20,23 @@
 
 <body class="body theme__light">
     <div class="overlay hide"></div>
-    <button id="dark-mode-toggle" class="btn__dark-mode-toggle"><i class="fas fa-adjust"></i></button>
+    <button id="dark-mode-toggle" class="btn__dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-adjust"></i></button>
     <header class="header">
         <div class="content-container">
             <div class="header__wrapper">
                 <div class="brand"><a href="index.html"><span>Tech</span>Innovators</a></div>
                 <div class="menu">
-                    <button class="btn__menu" id="btn__menu"><i class="fas fa-bars"></i></button>
+                    <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="fas fa-bars"></i></button>
                     <nav class="nav">
                         <ul class="nav__items">
                             <li class="nav__item"><a href="index.html">Home</a></li>
-                            <li class="nav__item"><a href="#">Programs</a></li>
+                            <li class="nav__item"><a href="/pages/programs.html">Programs</a></li>
                             <!-- <li class="nav__item"><a href="#">Curriculum</a></li> -->
                             <!-- <li class="nav__item"><a href="#">Pricing</a></li> -->
-                            <li class="nav__item"><a href="#">About Us</a></li>
                         </ul>
                     </nav>
                 </div>
-                <button class="btn__enroll">Book Free Trial Now</button>
+                <button class="btn__enroll" aria-label="Book free trial now">Book Free Trial Now</button>
             </div>
         </div>
     </header>
@@ -158,7 +163,8 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
+                navigator.serviceWorker.register('/sw.js')
+                    
             });
         }
     </script>
