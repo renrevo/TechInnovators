@@ -17,7 +17,13 @@ const assets = [
     '/js/theme.js',
     '/js/transparent-to-solid-header.js',
     '/pages/about-us.html',
-    '/pages/programs.html'
+    '/pages/programs.html',
+
+    // remove these when website is moved to its domain from github pages
+    '/TechnInnovators/',
+    '/TechnInnovators/index.html',
+    '/TechnInnovators/pages/about-us.html',
+    '/TechnInnovators/pages/programs.html',
 ];
 
 
