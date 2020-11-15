@@ -20,10 +20,10 @@ const assets = [
     '/pages/programs.html',
 
     // remove these when website is moved to its domain from github pages
-    '/TechnInnovators/',
-    '/TechnInnovators/index.html',
-    '/TechnInnovators/pages/about-us.html',
-    '/TechnInnovators/pages/programs.html',
+    'TechnInnovators/',
+    'TechnInnovators/index.html',
+    'TechnInnovators/pages/about-us.html',
+    'TechnInnovators/pages/programs.html',
 ];
 
 
