@@ -231,7 +231,8 @@
 }
 
 
-.hero {
+.hero,
+.about-us {
 
     @include themify($themes) {
         background-color: themed('backgroundColorPrimary');
@@ -364,6 +365,95 @@
 // .hidden {
 //     display: none;
 // }
+
+.members {
+    padding-top: $padding * 6;
+    padding-bottom: $padding * 6;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+        color: themed('textColor');
+    }
+
+}
+
+.teammate {
+    position: relative;
+    width: 20rem;
+
+    &__pic {
+
+        img {
+            vertical-align: middle;
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+        }
+
+    }
+
+    &__detail {
+        text-align: center;
+    }
+
+    &__sw {
+        padding: $padding * 2 $padding;
+        border-bottom: $border-thin solid darken($color-white, 12);
+    }
+
+    &__name {
+        font-size: $t3;
+        font-weight: $font-weight-bold;
+    }
+
+    &__position {
+        font-size: $t5;
+        font-weight: $font-weight-semiBold;
+        margin-top: $margin * 0.25;
+    }
+
+    &__about {
+        font-size: $t5;
+        margin-top: $margin * 0.5;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: $padding * 0.5;
+        padding-bottom: $padding * 0.5;
+    }
+
+    &__social-link {
+
+        a {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: $border-radius-button;
+            margin-right: $margin * 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 300ms ease-in-out;
+
+            i {
+                font-size: $i2;
+            }
+
+            &:hover {
+
+                i {
+                    color: $color-white;
+                }
+
+            }
+
+        }
+
+    }
+
+}
 
 .footer {
     grid-area: footer;
@@ -607,7 +697,8 @@
         padding-right: $padding * 3;
     }
 
-    .hero {
+    .hero,
+    .about-us {
 
         &__wrapper {
             flex-direction: row;
@@ -653,6 +744,18 @@
 
         &__illustration {
             height: 8rem;
+        }
+
+    }
+
+    .about-us {
+
+        &__text {
+            order: 2;
+        }
+
+        &__illustration {
+            order: 1;
         }
 
     }
