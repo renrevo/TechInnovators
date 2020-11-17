@@ -1,0 +1,8 @@
+@import '../variables';
+
+@mixin cards($min-width: 16rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+}
