@@ -179,10 +179,9 @@
     }
 
     &__item {
+        position: relative;
         line-height: 3;
         text-align: center;
-        padding-left: $padding;
-        padding-right: $padding;
         font-size: $t4;
         font-weight: $font-weight-semiBold;
         border-bottom-width: $border-thin;
@@ -193,11 +192,51 @@
         }
 
         a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             @include themify($themes) {
                 color: themed('textColor');
             }
 
+        }
+
+        &:hover {
+
+            &::before {
+                content: '';
+                width: 0.24rem;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                @include themify($themes) {
+                    background-color: themed('textColor');
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.active {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0.24rem;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include themify($themes) {
+            background-color: themed('textColor');
         }
 
     }
@@ -657,8 +696,35 @@
         &__item {
             white-space: nowrap;
             border-bottom: none;
+            margin-left: $margin;
+            margin-right: $margin;
+
+            &::before {
+                display: none;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: $padding;
+                right: $padding;
+                height: 2px;
+                transform: scaleX(0);
+                transition: transform 200ms ease-in-out;
+
+                @include themify($themes) {
+                    background-color: themed('textColor');
+                }
+
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
 
             a {
+                display: unset;
                 position: relative;
                 text-decoration: none;
                 font-family: $font-family-text;
@@ -670,28 +736,20 @@
                     color: themed('textColor');
                 }
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: $padding;
-                    right: $padding;
-                    height: 2px;
-                    transform: scaleX(0);
-                    transition: transform 200ms ease-in-out;
-
-                    @include themify($themes) {
-                        background-color: themed('textColor');
-                    }
-
-                }
-
-                &:hover::after {
-                    transform: scaleX(1);
-                }
-
             }
 
+        }
+
+    }
+
+    .active {
+
+        &::before {
+            display: none;
+        }
+
+        &:after {
+            transform: scaleX(1);
         }
 
     }

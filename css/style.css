@@ -192,10 +192,9 @@
 }
 
 .nav__item {
+  position: relative;
   line-height: 3;
   text-align: center;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
   border-bottom-width: 1px;
@@ -210,12 +209,62 @@
   border-color: #474747;
 }
 
+.nav__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .theme__light .nav__item a {
   color: #000000;
 }
 
 .theme__dark .nav__item a {
   color: #ffffff;
+}
+
+.nav__item:hover::before {
+  content: '';
+  width: 0.24rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.theme__light .nav__item:hover::before {
+  background-color: #000000;
+}
+
+.theme__dark .nav__item:hover::before {
+  background-color: #ffffff;
+}
+
+.active {
+  position: relative;
+}
+
+.active::before {
+  content: '';
+  width: 0.24rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.theme__light .active::before {
+  background-color: #000000;
+}
+
+.theme__dark .active::before {
+  background-color: #ffffff;
 }
 
 .main {
@@ -664,22 +713,13 @@
   .nav__item {
     white-space: nowrap;
     border-bottom: none;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
-  .nav__item a {
-    position: relative;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0.75rem;
+  .nav__item::before {
+    display: none;
   }
-  .theme__light .nav__item a {
-    color: #000000;
-  }
-  .theme__dark .nav__item a {
-    color: #ffffff;
-  }
-  .nav__item a:after {
+  .nav__item:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -693,13 +733,35 @@
     transition: transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   }
-  .theme__light .nav__item a:after {
+  .theme__light .nav__item:after {
     background-color: #000000;
   }
-  .theme__dark .nav__item a:after {
+  .theme__dark .nav__item:after {
     background-color: #ffffff;
   }
-  .nav__item a:hover::after {
+  .nav__item:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .nav__item a {
+    display: unset;
+    position: relative;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem;
+  }
+  .theme__light .nav__item a {
+    color: #000000;
+  }
+  .theme__dark .nav__item a {
+    color: #ffffff;
+  }
+  .active::before {
+    display: none;
+  }
+  .active:after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
