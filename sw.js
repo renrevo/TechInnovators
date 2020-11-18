@@ -18,6 +18,8 @@ const assets = [
     '/js/transparent-to-solid-header.js',
     '/pages/about-us.html',
     '/pages/programs.html',
+    'TechInnovators',
+    'TechInnovators/index.html',
 ];
 
 
