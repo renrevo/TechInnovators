@@ -70,13 +70,22 @@
 }
 
 .btn__enroll {
-  display: block;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.9375rem 2.25rem;
   border-radius: 1rem;
   background-color: #0080FF;
   color: #ffffff;
+  margin: 1.5rem auto;
+}
+
+.btn__careers {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.9375rem 2.25rem;
+  border-radius: 1rem;
+  border: 2px solid #0080FF;
+  color: #0080FF;
   margin: 1.5rem auto;
 }
 
@@ -433,6 +442,62 @@
 
 .advantage__explanation {
   font-size: 1rem;
+}
+
+.theme__light .teach-with-us {
+  background-color: #ffffff;
+}
+
+.theme__dark .teach-with-us {
+  background-color: #002447;
+}
+
+.teach-with-us__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  -webkit-transform: translateY(4rem);
+          transform: translateY(4rem);
+}
+
+.theme__light .teach-with-us__content {
+  background-color: #ebf5ff;
+  color: #000000;
+}
+
+.theme__dark .teach-with-us__content {
+  background-color: #001429;
+  color: #ffffff;
+}
+
+.teach-with-us__content img {
+  width: 72%;
+}
+
+.teach-with-us__heading {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.teach-with-us__partner {
+  height: 8rem;
+}
+
+.theme__light .teach-with-us__partner {
+  background-color: #002447;
+}
+
+.theme__dark .teach-with-us__partner {
+  background-color: #00050a;
 }
 
 .members {
@@ -826,6 +891,23 @@
   }
   .advantage__illustration {
     height: 8rem;
+  }
+  .teach-with-us__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 3rem;
+  }
+  .teach-with-us__content img {
+    width: calc(100%/3);
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 1.5rem;
+  }
+  .teach-with-us__description {
+    margin-right: 1.5rem;
   }
   .about-us__text {
     -webkit-box-ordinal-group: 3;

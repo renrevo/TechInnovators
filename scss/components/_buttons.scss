@@ -2,9 +2,18 @@
 
 @mixin button-colored($background-color: $color-primary, $color: $color-white) {
     font-size: $t5;
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-semiBold;
     padding: $padding * 1.25 $padding * 3;
     border-radius: $border-radius-medium;
     background-color: $background-color;
-    color: $color-white;
+    color: $color;
+}
+
+@mixin button-bordered($border-color: $color-primary, $color: $color-primary, $border-width: $border-medium) {
+    font-size: $t5;
+    font-weight: $font-weight-medium;
+    padding: $padding * 1.25 $padding * 3;
+    border-radius: $border-radius-medium;
+    border: $border-width solid $border-color;
+    color: $color;
 }
