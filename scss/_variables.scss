@@ -30,9 +30,16 @@ $color-white: #ffffff;
 
 $color-primary: #0080FF;
 
-$border-radius-button: 0.5rem;
 $border-radius-small: 0.5rem;
 $border-radius-medium: 1rem;
 $border-radius-large: 2rem;
 $border-thin: 1px;
 $border-medium: 2px;
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;

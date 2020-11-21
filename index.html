@@ -11,7 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar" content="#ebf5ff">
     <meta name="msapplication-TileColor" content="#f4f4f4">
     <meta name="theme-color" content="#0080FF">
-    <meta name="description" author="Prateek Singh" content="TechInnovators is one of the leading workshop and STEM classes provider in Uttar Prradesh.">
+    <meta name="description" author="Prateek Singh"
+        content="TechInnovators is one of the leading workshop and STEM classes provider in Uttar Prradesh.">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -19,25 +20,36 @@
 </head>
 
 <body class="body theme__light">
-    <div class="overlay hide"></div>
     <button id="dark-mode-toggle" class="btn__dark-mode-toggle" aria-label="Toggle dark mode"><i
             class="fas fa-adjust"></i></button>
     <header class="header">
         <div class="content-container">
             <div class="header__wrapper">
                 <div class="brand"><a href="index.html"><span>Tech</span>Innovators</a></div>
-                <div class="menu">
+                <div class="mobile-menu">
                     <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="fas fa-bars"></i></button>
+                    <div class="overlay hide"></div>
+                    <nav class="mobile-nav">
+                        <div class="content-container">
+                            <div class="mobile-nav__button">
+                                <button class="btn__close" id="btn__close" aria-label="Close menu"><i
+                                        class="far fa-times-circle"></i></button>
+                            </div>
+                        </div>
+                        <ul class="mobile-nav__items">
+                            <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="mobile-nav__item"><a href="pages/programs.html">Programs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu">
                     <nav class="nav">
                         <ul class="nav__items">
                             <li class="nav__item active"><a href="index.html">Home</a></li>
                             <li class="nav__item"><a href="pages/programs.html">Programs</a></li>
-                            <!-- <li class="nav__item"><a href="#">Curriculum</a></li> -->
-                            <!-- <li class="nav__item"><a href="#">Pricing</a></li> -->
                         </ul>
                     </nav>
                 </div>
-                <button class="btn__enroll" aria-label="Book free trial now">Book Free Trial Now</button>
             </div>
         </div>
     </header>
@@ -51,6 +63,7 @@
                             <li>Arm your child with the power of Coding</li>
                             <li>& Mathematical Thinking</li>
                         </ul>
+                        <button class="btn__enroll" aria-label="Book free trial now">Book Free Trial Now</button>
                     </div>
                     <div class="hero__illustration">
                         <img src="assets/illustration/reading.svg" alt="">
@@ -123,11 +136,13 @@
                         <li class="social__link"><a href="#" class="social__youtube" target="blank" rel="noopener"><i
                                     class="fab fa-youtube"></i></a></li>
                         <li class="social__link"><a href="https://www.facebook.com/thetechinnovators"
-                                class="social__facebook" target="blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
+                                class="social__facebook" target="blank" rel="noopener"><i
+                                    class="fab fa-facebook"></i></a></li>
                         <li class="social__link"><a href="#" class="social__twitter"><i class="fab fa-twitter"
                                     target="blank" rel="noopener"></i></a></li>
                         <li class="social__link"><a href="https://www.linkedin.com/company/tech-innovators-india/"
-                                class="social__linkedin" target="blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                                class="social__linkedin" target="blank" rel="noopener"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
                 <div class="company">
@@ -135,7 +150,7 @@
                     <ul class="comapny__links">
                         <li class="company__link"><a href="pages/about-us.html">About Us</a></li>
                         <li class="company__link"><a href="#">Career</a></li>
-                        <li class="company__link"><a href="#">FAQ</a></li>
+                        <li class="company__link"><a href="pages/faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="contact">
@@ -147,7 +162,8 @@
             </div>
             <div class="footer__bottom">
                 <ul class="footer__links">
-                    <li class="footer__link"><a href="#" target="blank" rel="noopener">&#169; 2020 TechInnovators</a></li>
+                    <li class="footer__link"><a href="#" target="blank" rel="noopener">&#169; 2020 TechInnovators</a>
+                    </li>
                     <li class="footer__link"><a href="#" target="blank" rel="noopener">Terms and Conditions</a></li>
                     <li class="footer__link"><a href="#" target="blank" rel="noopener">Privacy Policy</a></li>
                 </ul>
@@ -157,8 +173,6 @@
 
     <script src="js/app.js"></script>
     <script src="js/theme.js"></script>
-    <script src="js/transparent-to-solid-header.js"></script>
-    <script src="js/hamburger-toggler.js"></script>
     <!-- <script src="js/carousel.js"></script> -->
 </body>
 
