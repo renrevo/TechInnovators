@@ -1,23 +1,5 @@
 const staticCacheName = 'site-static';
 const assets = [
-    '/',
-    '/index.html',
-    '/assets/illustration/interactive-class.svg',
-    '/assets/illustration/personalized-learning.svg',
-    '/assets/illustration/reading.svg',
-    '/assets/illustration/zero-to-hero.svg',
-    '/css/all.css',
-    '/css/reset.css',
-    '/css/style.css',
-    'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap',
-    'https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap',
-    '/js/app.js',
-    '/js/carousel.js',
-    '/js/hamburger-toggler.js',
-    '/js/theme.js',
-    '/js/transparent-to-solid-header.js',
-    '/pages/about-us.html',
-    '/pages/programs.html',
     'TechInnovators',
     'TechInnovators/index.html',
 ];
