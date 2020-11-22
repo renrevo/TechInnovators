@@ -74,7 +74,7 @@
 
     &__careers {
         @include button-bordered;
-        margin: $margin * 2 auto;
+        margin-top: $margin * 2;
     }
 
     // &__carousel {
@@ -281,13 +281,13 @@
     }
 
     &__wrapper {
-        min-height: 100vh;
+        // min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: $padding * 6;
-        padding-bottom: $padding * 6;
+        padding-top: $padding * 8;
+        padding-bottom: $padding * 8;
     }
 
     &__text {
@@ -349,8 +349,8 @@
 }
 
 .advantages {
-    padding-top: $padding * 3;
-    padding-bottom: $padding * 3;
+    padding-top: $padding * 4;
+    padding-bottom: $padding * 4;
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
@@ -444,8 +444,8 @@
 }
 
 .members {
-    padding-top: $padding * 6;
-    padding-bottom: $padding * 6;
+    padding-top: $padding * 4;
+    padding-bottom: $padding * 4;
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
@@ -750,9 +750,6 @@
     }
 
     .nav {
-        background-color: transparent !important;
-        padding-top: 0;
-        padding-bottom: 0;
 
         &__items {
             display: flex;
@@ -878,18 +875,14 @@
 
         &__content {
             flex-direction: row;
-            padding: $padding * 4;
+            padding: $padding * 3;
 
             img {
                 width: calc(100%/3);
                 order: 2;
-                margin-left: $margin * 2;
+                padding-left: $padding * 4;
             }
 
-        }
-
-        &__description {
-            margin-right: $margin * 2;
         }
 
     }
