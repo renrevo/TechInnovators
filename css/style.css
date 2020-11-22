@@ -389,8 +389,20 @@
   font-weight: 700;
 }
 
-.features {
-  height: 20rem;
+.theme__light .section__heading {
+  color: #000000;
+}
+
+.theme__dark .section__heading {
+  color: #ffffff;
+}
+
+.features,
+.advantages,
+.stem,
+.members {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .theme__light .features {
@@ -401,24 +413,25 @@
   background-color: #002447;
 }
 
-.advantages {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .theme__light .advantages {
   background-color: #ffffff;
-  color: #000000;
 }
 
 .theme__dark .advantages {
   background-color: #002447;
-  color: #ffffff;
 }
 
 .advantage {
   text-align: center;
   padding: 0.75rem;
+}
+
+.theme__light .advantage {
+  color: #000000;
+}
+
+.theme__dark .advantage {
+  color: #ffffff;
 }
 
 .advantage__cards {
@@ -441,6 +454,71 @@
 
 .advantage__explanation {
   font-size: 1rem;
+}
+
+.theme__light .stem {
+  background-color: #ffffff;
+}
+
+.theme__dark .stem {
+  background-color: #002447;
+}
+
+.stem__cards {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 3rem;
+}
+
+.stem__card {
+  padding: 24px;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #ffffff;
+}
+
+.stem__card--science {
+  background-color: #E30000;
+}
+
+.stem__card--technology {
+  background-color: #4caf50;
+}
+
+.stem__card--engineering {
+  background-color: #2934D0;
+}
+
+.stem__card--mathematics {
+  background-color: #FFD900;
+}
+
+.stem__illustration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stem__illustration img {
+  height: 8rem;
+}
+
+.stem__heading {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.stem__description {
+  font-size: 1rem;
+  margin-top: 0.75rem;
 }
 
 .theme__light .teach-with-us {
@@ -497,11 +575,6 @@
 
 .theme__dark .teach-with-us__partner {
   background-color: #00050a;
-}
-
-.members {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .theme__light .members {
@@ -874,10 +947,6 @@
   .about-us__illustration img {
     width: 84%;
   }
-  .advantages {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
   .advantage__cards {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -885,6 +954,11 @@
   }
   .advantage__illustration {
     height: 8rem;
+  }
+  .stem__cards {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
   }
   .teach-with-us__content {
     -webkit-box-orient: horizontal;

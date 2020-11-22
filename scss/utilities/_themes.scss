@@ -1,8 +1,6 @@
 @use '../variables';
 
-$themes: (
-    light: (
-        backgroundColorPrimary: lighten($color-primary, 46),
+$themes: (light: (backgroundColorPrimary: lighten($color-primary, 46),
         backgroundColorSecondary: $color-white,
         backgroundColorTertiary: darken($color-primary, 36),
         socialBackgroundColor: darken($color-primary, 16),
@@ -11,8 +9,7 @@ $themes: (
         borderColor: lighten($color-black, 72),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.24),
     ),
-    dark: (
-        backgroundColorPrimary: darken($color-primary, 42),
+    dark: (backgroundColorPrimary: darken($color-primary, 42),
         backgroundColorSecondary: darken($color-primary, 36),
         backgroundColorTertiary: darken($color-primary, 48),
         socialBackgroundColor: darken($color-primary, 24),
@@ -20,7 +17,7 @@ $themes: (
         iconColor: $color-white,
         borderColor: darken($color-white, 72),
         boxShadow: 0 3px 6px rgba(0, 0, 0, 0.48),
-    ), 
+    ),
 );
 
 @mixin themify($themes) {
