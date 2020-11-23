@@ -77,13 +77,13 @@
         margin-top: $margin * 2;
     }
 
-    // &__carousel {
-    //     @include carousel-button;
-    // }
+    &__carousel {
+        @include carousel-button;
+    }
 
-    // &__indicator {
-    //     @include carousel-indicator;
-    // }
+    &__indicator {
+        @include carousel-indicator;
+    }
 
 }
 
@@ -363,7 +363,6 @@
 
 .advantages {
 
-
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
     }
@@ -466,17 +465,17 @@
 
 }
 
-// .carousel {
-//     @include carousel;
-// }
+.carousel {
+    @include carousel;
+}
 
-// .current-indicator {
-//     @include current-indicator;
-// }
+.current-indicator {
+    @include current-indicator;
+}
 
-// .hidden {
-//     display: none;
-// }
+.hidden {
+    display: none;
+}
 
 .teach-with-us {
 
