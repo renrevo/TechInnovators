@@ -2,7 +2,7 @@
     "name": "TechInnovators",
     "short_name": "TechInnovators",
     "start_url": "index.html",
-    "scope": ".",
+    "scope": "./",
     "display": "standalone",
     "background_color": "#ebf5ff",
     "theme_color": "#ebf5ff",
