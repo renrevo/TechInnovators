@@ -3,7 +3,15 @@ var VERSION = 'version_01' // Version of the off-line cache (change this value e
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
     '/{techinnovators}/',
-    '/{techinnovators}/index.html'
+    '/{techinnovators}/index.html',
+    '/{techinnovators}/css/all.css',
+    '/{techinnovators}/css/reset.css',
+    '/{techinnovators}/css/style.css',
+    '/{techinnovators}/js/app.js',
+    '/{techinnovators}/js/carousel.js',
+    '/{techinnovators}/js/theme.js',
+    '/{techinnovators}/assets/illustration/engineering.svg',
+    '/{techinnovators}/assets/illustration/reading.svg',
 ]
 
 // Respond with cached resources
