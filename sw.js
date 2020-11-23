@@ -1,42 +1,58 @@
-const staticCacheName = 'site-static';
-const assets = [
-    'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap',
-    'https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap',
-    '/{techinnovators}',
-    '/{techinnovators}/index.html',
-    '/{techinnovators}/assets/illustration/interactive-class.svg',
-    '/{techinnovators}/assets/illustration/personalized-learning.svg',
-    '/{techinnovators}/assets/illustration/reading.svg',
-    '/{techinnovators}/assets/illustration/zero-to-hero.svg',
-    '/{techinnovators}/css/all.css',
-    '/{techinnovators}/css/reset.css',
-    '/{techinnovators}/css/style.css',
-    '/{techinnovators}/js/app.js',
-    '/{techinnovators}/pages/about-us.html',
-    '/{techinnovators}/pages/programs.html',
-];
+var APP_PREFIX = 'TechInnovators_' // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = 'version_01' // Version of the off-line cache (change this value everytime you want to update cache)
+var CACHE_NAME = APP_PREFIX + VERSION
+var URLS = [
+    '/{techinnovators}/',
+    '/{techinnovators}/index.html'
+]
 
-
-self.addEventListener('install', e => {
-    // console.log('service worker has been installed');
-    e.waitUntil(
-        caches.open(staticCacheName).then((cache) => {
-            cache.addAll(assets);
-        })
-    );
-});
-
-// Activate event
-self.addEventListener('activate', e => {
-    // console.log('service worker has been activated');
-});
-
-// Fetch event
-self.addEventListener('fetch', e => {
-    // console.log('fetch event', e);
+// Respond with cached resources
+self.addEventListener('fetch', function (e) {
+    console.log('fetch request : ' + e.request.url)
     e.respondWith(
-        caches.match(e.request).then(cacheRes => {
-            return cacheRes || fetch(e.request);
+        caches.match(e.request).then(function (request) {
+            if (request) { // if cache is available, respond with cache
+                console.log('responding with cache : ' + e.request.url)
+                return request
+            } else { // if there are no cache, try fetching request
+                console.log('file is not cached, fetching : ' + e.request.url)
+                return fetch(e.request)
+            }
+
+            // You can omit if/else for console.log & put one line below like this too.
+            // return request || fetch(e.request)
         })
-    );
-});
+    )
+})
+
+// Cache resources
+self.addEventListener('install', function (e) {
+    e.waitUntil(
+        caches.open(CACHE_NAME).then(function (cache) {
+            console.log('installing cache : ' + CACHE_NAME)
+            return cache.addAll(URLS)
+        })
+    )
+})
+
+// Delete outdated caches
+self.addEventListener('activate', function (e) {
+    e.waitUntil(
+        caches.keys().then(function (keyList) {
+            // `keyList` contains all cache names under your username.github.io
+            // filter out ones that has this app prefix to create white list
+            var cacheWhitelist = keyList.filter(function (key) {
+                return key.indexOf(APP_PREFIX)
+            })
+            // add current cache name to white list
+            cacheWhitelist.push(CACHE_NAME)
+
+            return Promise.all(keyList.map(function (key, i) {
+                if (cacheWhitelist.indexOf(key) === -1) {
+                    console.log('deleting cache : ' + keyList[i])
+                    return caches.delete(keyList[i])
+                }
+            }))
+        })
+    )
+})
