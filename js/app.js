@@ -42,7 +42,7 @@ overlay.addEventListener('click', () => {
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/{techinnovators}/sw.js', {
-            scope: '/{techinnovators}'
+            scope: '/techinnovators'
         })
     });
 }
