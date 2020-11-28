@@ -496,11 +496,11 @@
 }
 
 .theme__light .stem {
-  background-color: #ffffff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .stem {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .stem__cards {
@@ -515,23 +515,16 @@
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+
+.theme__light .stem__card {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.theme__dark .stem__card {
+  background-color: #002447;
   color: #ffffff;
-}
-
-.stem__card--science {
-  background-color: #E30000;
-}
-
-.stem__card--technology {
-  background-color: #4caf50;
-}
-
-.stem__card--engineering {
-  background-color: #2934D0;
-}
-
-.stem__card--mathematics {
-  background-color: #FFD900;
 }
 
 .stem__illustration {
@@ -547,6 +540,7 @@
 }
 
 .stem__illustration img {
+  width: 100%;
   height: 8rem;
 }
 
@@ -1095,6 +1089,9 @@
         -ms-flex-order: 2;
             order: 2;
     padding-left: 3rem;
+  }
+  .teach-with-us__description {
+    padding-right: 3rem;
   }
   .about-us__text {
     -webkit-box-ordinal-group: 3;

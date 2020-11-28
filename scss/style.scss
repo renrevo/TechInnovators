@@ -407,7 +407,7 @@
 .stem {
 
     @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
+        background-color: themed('backgroundColorPrimary');
     }
 
     &__cards {
@@ -422,22 +422,10 @@
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        color: $color-white;
 
-        &--science {
-            background-color: $color-red;
-        }
-
-        &--technology {
-            background-color: $color-green;
-        }
-
-        &--engineering {
-            background-color: $color-blue;
-        }
-
-        &--mathematics {
-            background-color: $color-yellow;
+        @include themify($themes) {
+            background-color: themed('backgroundColorSecondary');
+            color: themed('textColor');
         }
 
     }
@@ -448,6 +436,7 @@
         justify-content: center;
 
         img {
+            width: 100%;
             height: 8rem;
         }
 
@@ -961,6 +950,10 @@
                 padding-left: $padding * 4;
             }
 
+        }
+
+        &__description {
+            padding-right: $padding * 4;
         }
 
     }
