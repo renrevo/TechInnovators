@@ -37,6 +37,18 @@ overlay.addEventListener('click', () => {
     navToggler();
 });
 
+// Programs drop-down toggler
+const programs = document.getElementById('programs');
+
+function programsToggler() {
+    document.querySelector('.programs__items').classList.toggle('hide');
+    document.querySelector('.fa-angle-down').classList.toggle('fa-angle-up');
+}
+
+programs.addEventListener('click', () => {
+    programsToggler();
+})
+
 // Service Worker for PWA
 
 if ('serviceWorker' in navigator) {

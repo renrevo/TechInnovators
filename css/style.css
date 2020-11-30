@@ -225,20 +225,22 @@
 .mobile-nav {
   position: fixed;
   top: 0;
-  right: -12rem;
+  right: -14rem;
   height: 100%;
   white-space: nowrap;
-  width: 12rem;
+  width: 14rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
 .theme__light .mobile-nav {
   background-color: #ebf5ff;
+  color: #000000;
 }
 
 .theme__dark .mobile-nav {
   background-color: #001429;
+  color: #ffffff;
 }
 
 .mobile-nav__button {
@@ -262,7 +264,8 @@
 .mobile-nav__item {
   position: relative;
   line-height: 3;
-  text-align: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
   border-bottom-width: 1px;
@@ -284,9 +287,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .theme__light .mobile-nav__item a {
@@ -329,6 +329,28 @@
 
 .theme__dark .active::before {
   background-color: #ffffff;
+}
+
+.programs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.programs__items {
+  will-change: height;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.programs__item {
+  padding-left: 0.75rem;
 }
 
 .menu {

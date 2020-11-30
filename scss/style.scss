@@ -170,14 +170,15 @@
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -12rem;
+    right: -14rem;
     height: 100%;
     white-space: nowrap;
-    width: 12rem;
+    width: 14rem;
     transition: all 300ms ease-in-out;
 
     @include themify($themes) {
         background-color: themed('backgroundColorPrimary');
+        color: themed('textColor');
     }
 
     &__button {
@@ -197,7 +198,8 @@
     &__item {
         position: relative;
         line-height: 3;
-        text-align: center;
+        padding-left: $padding;
+        padding-right: $padding;
         font-size: $t4;
         font-weight: $font-weight-semiBold;
         border-bottom-width: $border-thin;
@@ -210,7 +212,6 @@
         a {
             display: flex;
             align-items: center;
-            justify-content: center;
 
             @include themify($themes) {
                 color: themed('textColor');
@@ -254,6 +255,23 @@
             background-color: themed('textColor');
         }
 
+    }
+
+}
+
+.programs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__items {
+        will-change: height;
+        font-size: $t5;
+        font-weight: $font-weight-medium;
+    }
+
+    &__item {
+        padding-left: $padding;
     }
 
 }
