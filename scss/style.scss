@@ -87,10 +87,20 @@
 
 }
 
-.anchor__enroll {
-    display: inline-block;
-    @include button-colored;
-    margin: $margin * 2 auto;
+.anchor {
+
+    &__enroll {
+        display: inline-block;
+        @include button-colored;
+        margin: $margin * 2 auto;
+    }
+
+    &__careers {
+        display: inline-block;
+        @include button-bordered;
+        margin-top: $margin * 2;
+    }
+
 }
 
 .body {
@@ -377,10 +387,53 @@
     padding-bottom: $padding * 6;
 }
 
-.services {
+.advantages {
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
+    }
+
+}
+
+.advantage {
+    text-align: center;
+    padding: $padding;
+
+    @include themify($themes) {
+        color: themed('textColor');
+    }
+
+    &__cards {
+        display: grid;
+        grid-row-gap: 3rem;
+    }
+
+    &__illustration {
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__heading {
+        margin-top: $margin * 3;
+        margin-bottom: $margin;
+        font-size: $t3;
+        font-weight: $font-weight-bold;
+    }
+
+    &__explanation {
+        font-size: $t4;
+    }
+
+}
+
+.services {
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorPrimary');
         color: themed('textColor');
     }
 
@@ -429,49 +482,6 @@
     &__description {
         font-size: $t4;
         margin-top: $margin;
-    }
-
-}
-
-.advantages {
-
-    @include themify($themes) {
-        background-color: themed('backgroundColorPrimary');
-    }
-
-}
-
-.advantage {
-    text-align: center;
-    padding: $padding;
-
-    @include themify($themes) {
-        color: themed('textColor');
-    }
-
-    &__cards {
-        display: grid;
-        grid-row-gap: 3rem;
-    }
-
-    &__illustration {
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-    }
-
-    &__heading {
-        margin-top: $margin * 3;
-        margin-bottom: $margin;
-        font-size: $t3;
-        font-weight: $font-weight-bold;
-    }
-
-    &__explanation {
-        font-size: $t4;
     }
 
 }
