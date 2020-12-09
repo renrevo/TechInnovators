@@ -87,6 +87,12 @@
 
 }
 
+.anchor__enroll {
+    display: inline-block;
+    @include button-colored;
+    margin: $margin * 2 auto;
+}
+
 .body {
     font-family: $font-family-text;
     min-height: 100%;
@@ -353,6 +359,7 @@
         text-align: center;
         font-size: $t2;
         font-weight: $font-weight-bold;
+        text-transform: uppercase;
 
         @include themify($themes) {
             color: themed('textColor');
@@ -362,7 +369,7 @@
 
 }
 
-.features,
+.services,
 .advantages,
 .stem,
 .members {
@@ -370,11 +377,43 @@
     padding-bottom: $padding * 6;
 }
 
-
-.features {
+.services {
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
+        color: themed('textColor');
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: $margin * 4;
+    }
+
+    &__heading {
+        font-size: $t3;
+        font-weight: $font-weight-medium;
+        line-height: 1.6;
+    }
+
+    &__offered {
+        display: grid;
+        grid-row-gap: $margin * 3;
+    }
+
+}
+
+.service {
+
+    &__heading {
+        font-size: $t4;
+        font-weight: $font-weight-semiBold;
+        padding-bottom: $padding * 0.25;
+        border-bottom: $border-medium solid $border-color;
+    }
+
+    &__description {
+        font-size: $t4;
+        margin-top: $margin;
     }
 
 }
@@ -382,7 +421,7 @@
 .advantages {
 
     @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
+        background-color: themed('backgroundColorPrimary');
     }
 
 }
@@ -425,7 +464,7 @@
 .stem {
 
     @include themify($themes) {
-        background-color: themed('backgroundColorPrimary');
+        background-color: themed('backgroundColorSecondary');
     }
 
     &__cards {
@@ -933,6 +972,29 @@
         }
 
     }
+
+    .services {
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-column-gap: 6rem;
+        }
+
+        &__description {
+            text-align: start;
+            // align-self: center;
+        }
+
+        &__offered {
+            @include cards(14rem);
+            grid-column-gap: 6rem;
+            grid-row-gap: 3rem;
+        }
+
+    }
+
+    .service {}
 
     .advantage {
 

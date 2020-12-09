@@ -128,6 +128,17 @@
   border: 2px solid rgba(255, 255, 255, 0.72);
 }
 
+.anchor__enroll {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.9375rem 2.25rem;
+  border-radius: 1rem;
+  background-color: #0080FF;
+  color: #ffffff;
+  margin: 1.5rem auto;
+}
+
 .body {
   font-family: "Montserrat", sans-serif;
   min-height: 100%;
@@ -448,6 +459,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .theme__light .section__heading {
@@ -458,7 +470,7 @@
   color: #ffffff;
 }
 
-.features,
+.services,
 .advantages,
 .stem,
 .members {
@@ -466,20 +478,51 @@
   padding-bottom: 4.5rem;
 }
 
-.theme__light .features {
+.theme__light .services {
   background-color: #ffffff;
+  color: #000000;
 }
 
-.theme__dark .features {
+.theme__dark .services {
   background-color: #002447;
+  color: #ffffff;
+}
+
+.services__description {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services__heading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.services__offered {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 2.25rem;
+}
+
+.service__heading {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 0.1875rem;
+  border-bottom: 2px solid #b8b8b8;
+}
+
+.service__description {
+  font-size: 1rem;
+  margin-top: 0.75rem;
 }
 
 .theme__light .advantages {
-  background-color: #ffffff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .advantages {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .advantage {
@@ -518,11 +561,11 @@
 }
 
 .theme__light .stem {
-  background-color: #ebf5ff;
+  background-color: #ffffff;
 }
 
 .theme__dark .stem {
-  background-color: #001429;
+  background-color: #002447;
 }
 
 .stem__cards {
@@ -730,8 +773,6 @@
   display: grid;
   -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 4rem;
 }
 
 .teammate__pic img {
@@ -1084,6 +1125,24 @@
   .hero__illustration img,
   .about-us__illustration img {
     width: 84%;
+  }
+  .services__content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    grid-column-gap: 6rem;
+  }
+  .services__description {
+    text-align: start;
+  }
+  .services__offered {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(14rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    grid-column-gap: 6rem;
+    grid-row-gap: 3rem;
   }
   .advantage__cards {
     -ms-grid-columns: 1fr 1fr 1fr;
