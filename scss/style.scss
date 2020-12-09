@@ -404,6 +404,21 @@
 
 .service {
 
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: $border-thin solid $border-color;
+        border-radius: $border-radius-medium;
+        margin-bottom: $margin;
+
+        i {
+            font-size: $i3;
+        }
+    }
+
     &__heading {
         font-size: $t4;
         font-weight: $font-weight-semiBold;
