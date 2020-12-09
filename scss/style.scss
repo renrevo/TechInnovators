@@ -576,6 +576,8 @@
 
 .teammates {
     @include cards;
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
 }
 
 .teammate {
@@ -993,8 +995,6 @@
         }
 
     }
-
-    .service {}
 
     .advantage {
 

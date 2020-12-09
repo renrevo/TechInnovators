@@ -773,6 +773,8 @@
   display: grid;
   -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
 }
 
 .teammate__pic img {
