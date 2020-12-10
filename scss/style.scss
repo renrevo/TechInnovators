@@ -456,6 +456,12 @@
 }
 
 .service {
+    padding: $padding * 2;
+    border-radius: $border-radius-large;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+    }
 
     &__icon {
         width: 3rem;
@@ -463,7 +469,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: $border-thin solid $border-color;
+        border: $border-medium solid $border-color;
         border-radius: $border-radius-medium;
         margin-bottom: $margin;
 
@@ -475,8 +481,8 @@
     &__heading {
         font-size: $t4;
         font-weight: $font-weight-semiBold;
-        padding-bottom: $padding * 0.25;
-        border-bottom: $border-medium solid $border-color;
+        // padding-bottom: $padding * 0.25;
+        // border-bottom: $border-medium solid $border-color;
     }
 
     &__description {
