@@ -21,7 +21,7 @@ const closeMenu = document.getElementById('btn__close');
 const overlay = document.querySelector('.overlay');
 
 function navToggler() {
-    document.querySelector('.mobile-nav').classList.toggle('mobile-nav__active');
+    document.querySelector('.nav').classList.toggle('nav__active');
     document.querySelector('.overlay').classList.toggle('hide');
 }
 
@@ -37,22 +37,10 @@ overlay.addEventListener('click', () => {
     navToggler();
 });
 
-// Programs drop-down toggler
-const programs = document.getElementById('programs');
-
-function programsToggler() {
-    document.querySelector('.programs__items').classList.toggle('hide');
-    document.querySelector('.fa-angle-down').classList.toggle('fa-angle-up');
-}
-
-programs.addEventListener('click', () => {
-    programsToggler();
-})
-
 // Service Worker for PWA
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/techinnovators/sw.js')
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', function () {
+//         navigator.serviceWorker.register('/techinnovators/sw.js')
+//     });
+// }

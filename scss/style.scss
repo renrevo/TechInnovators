@@ -107,7 +107,7 @@
     font-family: $font-family-text;
     min-height: 100%;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: "header"
         "main"
         "footer";
@@ -183,7 +183,7 @@
     position: relative;
 }
 
-.mobile-nav {
+.nav {
     position: fixed;
     top: 0;
     right: -14rem;
@@ -194,12 +194,13 @@
 
     @include themify($themes) {
         background-color: themed('backgroundColorPrimary');
-        color: themed('textColor');
     }
 
-    &__button {
+    &__close {
         display: flex;
         justify-content: flex-end;
+        padding-left: $padding * 1.5;
+        padding-right: $padding * 1.5;
     }
 
     &__active {
@@ -213,46 +214,67 @@
 
     &__item {
         position: relative;
-        line-height: 3;
-        padding-left: $padding;
-        padding-right: $padding;
-        font-size: $t4;
-        font-weight: $font-weight-semiBold;
-        border-bottom-width: $border-thin;
-        border-bottom-style: solid;
-
-        @include themify($themes) {
-            border-color: themed('borderColor');
-        }
+        line-height: 2.4;
+        border-bottom: $border-thin solid rgba(0, 0, 0, 0.12);
 
         a {
             display: flex;
             align-items: center;
+            padding-left: $padding;
+            padding-right: $padding;
 
             @include themify($themes) {
                 color: themed('textColor');
             }
 
-        }
+            i {
+                font-size: $i3;
+                margin-right: $margin;
+            }
 
-        &:hover {
-
-            &::before {
-                content: '';
-                width: 0.24rem;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-
-                @include themify($themes) {
-                    background-color: themed('textColor');
-                }
-
+            span {
+                font-size: $t4;
+                font-weight: $font-weight-semiBold;
             }
 
         }
 
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            transition: width 0.3s;
+            z-index: -1;
+
+            @include themify($themes) {
+                background-color: themed('backgroundColorHover');
+            }
+
+        }
+
+
+        &:hover {
+
+            &::before {
+                transition: width 0.4s 0.3s;
+                width: 100%;
+            }
+
+            a {
+                color: $color-white;
+            }
+
+        }
+
+    }
+
+    &__button-group {
+        display: grid;
+        grid-row-gap: 1rem;
+        padding: $padding;
     }
 
 }
@@ -276,24 +298,43 @@
 }
 
 .programs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    &:hover {
+
+        .programs__items {
+            display: block;
+        }
+
+    }
 
     &__items {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
         will-change: height;
         font-size: $t5;
         font-weight: $font-weight-medium;
+
+        @include themify($themes) {
+            background-color: themed('backgroundColorSecondary');
+        }
+
+        a {
+
+            @include themify($themes) {
+                color: themed('textColor');
+            }
+
+        }
+
     }
 
     &__item {
+        line-height: 2.8;
         padding-left: $padding;
     }
 
-}
-
-.menu {
-    display: none;
 }
 
 .main {
@@ -443,9 +484,9 @@
     }
 
     &__heading {
-        font-size: $t3;
-        font-weight: $font-weight-medium;
-        line-height: 1.6;
+        font-size: $t2;
+        font-weight: $font-weight-extraBold;
+        line-height: 1.2;
     }
 
     &__offered {
@@ -474,7 +515,7 @@
         margin-bottom: $margin;
 
         i {
-            font-size: $i3;
+            font-size: $i2;
         }
     }
 
@@ -903,27 +944,46 @@
     }
 
     .nav {
+        position: relative;
+        right: unset;
+        display: flex;
+        width: fit-content;
+        background-color: transparent !important;
+
+        &__close {
+            display: none;
+        }
+
+        &__button-group {
+            display: none;
+        }
 
         &__items {
             display: flex;
             align-items: center;
+            justify-content: center;
+            padding: 0;
         }
 
         &__item {
-            position: relative;
-            white-space: nowrap;
+            line-height: 2;
             border-bottom: none;
-            margin-left: $margin;
-            margin-right: $margin;
 
-            &:after {
+            &::before {
+                display: none;
+            }
+
+            &:hover::before {
+                display: none;
+            }
+
+            &::after {
                 content: "";
                 position: absolute;
                 top: 100%;
                 left: $padding;
                 right: $padding;
-                margin-top: $margin * 0.5;
-                height: 2px;
+                height: 3px;
                 transform: scaleX(0);
                 transition: transform 200ms ease-in-out;
 
@@ -937,14 +997,18 @@
                 transform: scaleX(1);
             }
 
-            a {
-                font-family: $font-family-text;
-                font-size: $t4;
-                font-weight: $font-weight-bold;
-                padding: $padding;
+            &:hover a {
 
                 @include themify($themes) {
                     color: themed('textColor');
+                }
+
+            }
+
+            a {
+
+                i {
+                    display: none;
                 }
 
             }
@@ -962,6 +1026,20 @@
 
         &:after {
             transform: scaleX(1);
+        }
+
+    }
+
+    .programs {
+
+        &__items {
+            left: unset;
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+
+        &__item {
+            padding-left: 0;
         }
 
     }
@@ -1017,6 +1095,10 @@
         &__description {
             text-align: start;
             // align-self: center;
+        }
+
+        &__heading {
+            font-size: $t1;
         }
 
         &__offered {

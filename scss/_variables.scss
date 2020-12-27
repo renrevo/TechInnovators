@@ -21,6 +21,7 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semiBold: 600;
 $font-weight-bold: 700;
+$font-weight-extraBold: 800;
 
 $padding: 0.75rem;
 $margin: 0.75rem;
@@ -40,6 +41,7 @@ $border-radius-medium: 1rem;
 $border-radius-large: 2rem;
 $border-thin: 1px;
 $border-medium: 2px;
+$border-thick: 4px;
 $border-color: lighten($color-black, 72);
 
 $z-index-dropdown: 1000;

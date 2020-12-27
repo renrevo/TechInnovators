@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#0080FF">
     <meta name="description" author="Prateek Singh"
         content="TechInnovators is one of the leading workshop and STEM classes provider in Uttar Prradesh.">
-    <link rel="stylesheet" href="css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>TechInnovators</title>
@@ -21,45 +21,23 @@
 
 <body class="body theme__light">
     <button id="dark-mode-toggle" class="btn__dark-mode-toggle" aria-label="Toggle dark mode"><i
-            class="fas fa-adjust"></i></button>
+            class="ri-contrast-line"></i></button>
     <header class="header">
         <div class="content-container">
             <div class="header__wrapper">
                 <div class="brand"><a href="index.html"><span>Tech</span>Innovators</a></div>
-                <!-- <div class="mobile-menu">
-                    <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="fas fa-bars"></i></button>
+                <div class="menu">
+                    <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="ri-menu-3-line"></i></button>
                     <div class="overlay hide"></div>
-                    <nav class="mobile-nav">
-                        <div class="content-container">
-                            <div class="mobile-nav__button">
-                                <button class="btn__close" id="btn__close" aria-label="Close menu"><i
-                                        class="far fa-times-circle"></i></button>
-                            </div>
-                        </div>
-                        <ul class="mobile-nav__items">
-                            <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
-                            <li class="mobile-nav__item">
-                                <div class="programs" id="programs">
-                                    <span class="programs__text">Programs</span>
-                                    <span class="programs__dropdown-icon"><i class="fas fa-angle-down"></i></span>
-                                </div>
-                                <ul class="programs__items hide">
-                                    <li class="programs__item"><a href="#">For School Students</a></li>
-                                    <li class="programs__item"><a href="#">For College Students</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div> -->
-                <!-- <div class="menu">
                     <nav class="nav">
+                        <div class="nav__close">
+                            <button class="btn__close" id="btn__close" aria-label="Close menu"><i
+                                    class="ri-close-line"></i></button>
+                        </div>
                         <ul class="nav__items">
-                            <li class="nav__item active"><a href="index.html">Home</a></li>
-                            <li class="nav__item">
-                                <div class="programs" id="programs">
-                                    <span class="programs__text">Programs</span>
-                                    <span class="programs__dropdown-icon"><i class="fas fa-angle-down"></i></span>
-                                </div>
+                            <li class="nav__item"><a href="index.html"><i class="ri-home-line"></i><span>Home</span></a>
+                            </li>
+                            <li class="nav__item programs"><a href="#programs"><i class="ri-apps-line"></i><span>Programs</span></a>
                                 <ul class="programs__items hide">
                                     <li class="programs__item"><a href="#">For School Students</a></li>
                                     <li class="programs__item"><a href="#">For College Students</a></li>
@@ -67,7 +45,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div> -->
+                </div>
             </div>
         </div>
     </header>
@@ -124,59 +102,52 @@
 
         <section class="services">
             <div class="content-container">
-                <h2 class="section__heading">Services</h2>
+                <!-- <h2 class="section__heading">Services</h2> -->
                 <div class="services__content">
                     <div class="services__description">
-                        <h3 class="services__heading">We provides a wide range of services in the field of
+                        <h3 class="services__heading">We provide a wide range of services in the field of
                             education that insures all-round growth of our students.</h3>
                     </div>
                     <div class="services__offered">
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-hammer"></i></div>
+                            <div class="service__icon"><i class="ri-tools-line"></i></div>
                             <h5 class="service__heading">Workshops</h5>
                             <p class="service__description">Engage in quality workshops on cutting edge technology and
                                 innovations taught by
-                                leading industry experts and follwed by participation certificates.</p>
+                                leading industry experts, follwed by participation certificates.</p>
                         </div>
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div class="service__icon"><i class="ri-artboard-line"></i></div>
                             <h5 class="service__heading">Seminars</h5>
-                            <p class="service__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Sequi voluptatem minima, facilis earum architecto incidunt soluta atque ratione magnam
-                                saepe molestiae ad corrupti! Repudiandae, debitis numquam autem optio voluptatum
-                                expedita.</p>
+                            <p class="service__description">Interactive sessions with participant on various topic
+                                related to science and technology.</p>
                         </div>
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-campground"></i></div>
+                            <div class="service__icon"><i class="ri-fire-line"></i></div>
                             <h5 class="service__heading">Holiday Camps</h5>
-                            <p class="service__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Sequi voluptatem minima, facilis earum architecto incidunt soluta atque ratione magnam
-                                saepe molestiae ad corrupti! Repudiandae, debitis numquam autem optio voluptatum
-                                expedita.</p>
+                            <p class="service__description">One or two weeks day camp programs where campers get to
+                                learn basics of robotics, coding, science & technology.</p>
                         </div>
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-trophy"></i></div>
-                            <h5 class="service__heading">Tech. Events</h5>
-                            <p class="service__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Sequi voluptatem minima, facilis earum architecto incidunt soluta atque ratione magnam
-                                saepe molestiae ad corrupti! Repudiandae, debitis numquam autem optio voluptatum
-                                expedita.</p>
+                            <div class="service__icon"><i class="ri-trophy-line"></i></div>
+                            <h5 class="service__heading">Technical Events</h5>
+                            <p class="service__description">Organisation of technical events which provide students a
+                                platform where they can showcase their
+                                talents.</p>
                         </div>
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-robot"></i></div>
+                            <div class="service__icon"><i class="ri-lightbulb-flash-fill"></i></div>
                             <h5 class="service__heading">Innovation Lab Setup</h5>
-                            <p class="service__description">Setting up a new innovation lab or reinnovating an already
+                            <p class="service__description">Setting up a new innovation lab or renovating an already
                                 existing one. We provide everything required starting from kits to personalized
                                 assistance and guidance from our expert team.
                             </p>
                         </div>
                         <div class="service">
-                            <div class="service__icon"><i class="fas fa-shapes"></i></div>
+                            <div class="service__icon"><i class="ri-robot-line"></i></div>
                             <h5 class="service__heading">Student Projects</h5>
-                            <p class="service__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Sequi voluptatem minima, facilis earum architecto incidunt soluta atque ratione magnam
-                                saepe molestiae ad corrupti! Repudiandae, debitis numquam autem optio voluptatum
-                                expedita.</p>
+                            <p class="service__description">Expert guidance for all engineering(Degree/Diploma) student
+                                projects, starting from initiation to conclusion.</p>
                         </div>
                     </div>
                 </div>
@@ -191,8 +162,8 @@
                 <li class="carousel__slide"><img src="assets/img/pic-04.jpg" alt=""></li>
             </ul>
             <div class="carousel__button-group">
-                <button class="btn__carousel btn__carousel--left hidden"><i class="fas fa-angle-left"></i></button>
-                <button class="btn__carousel btn__carousel--right"><i class="fas fa-angle-right"></i></button>
+                <button class="btn__carousel btn__carousel--left hidden"><i class="ri-arrow-left-s-line"></i></button>
+                <button class="btn__carousel btn__carousel--right"><i class="ri-arrow-right-s-line"></i></button>
             </div>
             <div class="carousel__nav">
                 <button class="btn__indicator current-indicator"></button>
@@ -238,6 +209,10 @@
             </div>
         </section>
 
+        <section class="testimonials">
+
+        </section>
+
         <section class="teach-with-us">
             <div class="content-container">
                 <div class="teach-with-us__content">
@@ -247,7 +222,8 @@
                         <p class="teach-with-us__text">If you want to ignite love for learning inside every student
                             then become a mentor and teach students around India with us.</p>
                         <!-- <button class="btn__careers">Careers</button> -->
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1O-1vGNukfcnHn3qLZwLzggnDdr0nxpqo20ekMrV0dFmvCA/viewform" class="anchor__careers">Careers</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1O-1vGNukfcnHn3qLZwLzggnDdr0nxpqo20ekMrV0dFmvCA/viewform"
+                            class="anchor__careers">Careers</a>
                     </div>
                 </div>
             </div>
@@ -261,15 +237,15 @@
                     <h4 class="footer__section-heading">Follow Us</h4>
                     <ul class="social__links">
                         <li class="social__link"><a href="#" class="social__youtube" target="blank" rel="noopener"><i
-                                    class="fab fa-youtube"></i></a></li>
+                                    class="ri-youtube-fill"></i></a></li>
                         <li class="social__link"><a href="https://www.facebook.com/thetechinnovators"
                                 class="social__facebook" target="blank" rel="noopener"><i
-                                    class="fab fa-facebook"></i></a></li>
-                        <li class="social__link"><a href="#" class="social__twitter"><i class="fab fa-twitter"
-                                    target="blank" rel="noopener"></i></a></li>
+                                    class="ri-facebook-circle-fill"></i></a></li>
+                        <li class="social__link"><a href="#" class="social__twitter"><i class="ri-twitter-fill"></i></a>
+                        </li>
                         <li class="social__link"><a href="https://www.linkedin.com/company/tech-innovators-india/"
                                 class="social__linkedin" target="blank" rel="noopener"><i
-                                    class="fab fa-linkedin-in"></i></a></li>
+                                    class="ri-linkedin-box-fill"></i></a></li>
                     </ul>
                 </div>
                 <div class="company">
