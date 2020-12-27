@@ -290,7 +290,7 @@
         top: 0;
 
         @include themify($themes) {
-            background-color: themed('textColor');
+            background-color: themed('backgroundColorHover');
         }
 
     }
@@ -406,7 +406,7 @@
 .section {
 
     &__heading {
-        margin-bottom: $margin * 3;
+        margin-bottom: $margin * 2;
         text-align: center;
         font-size: $t2;
         font-weight: $font-weight-bold;
@@ -418,14 +418,28 @@
 
     }
 
+    &__description {
+        margin-bottom: $margin * 4;
+        text-align: center;
+        font-size: $t4;
+        font-weight: $font-weight-medium;
+        line-height: 2;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
+    }
+
 }
 
 .services,
 .advantages,
+.testimonials,
 .stem,
 .members {
-    padding-top: $padding * 6;
-    padding-bottom: $padding * 6;
+    padding-top: $padding * 8;
+    padding-bottom: $padding * 8;
 }
 
 .advantages {
@@ -553,7 +567,7 @@
         border-bottom-right-radius: 1rem;
 
         @include themify($themes) {
-            background-color: themed('backgroundColorSecondary');
+            background-color: themed('backgroundColorPrimary');
             color: themed('textColor');
         }
 
@@ -593,6 +607,97 @@
 
 .hidden {
     display: none;
+}
+
+.testimonials {
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+    }
+
+}
+
+.tabbar {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: $t4;
+    font-weight: $font-weight-medium;
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius-large;
+        padding: $padding * 0.25;
+
+        @include themify($themes) {
+            background-color: themed('backgroundColorPrimary');
+            color: themed('textColor');
+        }
+
+    }
+
+    &__item {
+        padding: $padding $padding * 2;
+        border-radius: $border-radius-large;
+        cursor: pointer;
+
+        &--current {
+            color: $color-white;
+
+            @include themify($themes) {
+                background-color: themed('socialBackgroundColor');
+            }
+
+        }
+
+    }
+
+}
+
+.testimony {
+    padding: $padding * 2;
+    border-radius: $border-radius-large;
+    border-top-left-radius: 0;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorPrimary');
+        color: themed('textColor');
+    }
+
+    &__cards {
+        @include cards(18rem);
+        grid-gap: 3rem;
+        margin-top: $margin * 4;
+        margin-bottom: $margin * 4;
+    }
+
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: $margin;
+
+    &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: $border-radius-medium;
+        margin-right: $margin;
+
+        @include themify($themes) {
+            background-color: themed('backgroundColorSecondary');
+            color: themed('textColor');
+        }
+
+        i {
+            font-size: $i2;
+        }
+
+    }
 }
 
 .teach-with-us {
@@ -708,7 +813,7 @@
         a {
             width: 2.5rem;
             height: 2.5rem;
-            border-radius: $border-radius-medium;
+            border-radius: $border-radius-small;
             margin-right: $margin * 0.5;
             display: flex;
             align-items: center;

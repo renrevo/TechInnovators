@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#0080FF">
     <meta name="description" author="Prateek Singh"
         content="TechInnovators is one of the leading workshop and STEM classes provider in Uttar Prradesh.">
-    <link rel="stylesheet" href="../css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>TechInnovators</title>
@@ -21,35 +21,34 @@
 
 <body class="body theme__light">
     <button id="dark-mode-toggle" class="btn__dark-mode-toggle" aria-label="Toggle dark mode"><i
-            class="fas fa-adjust"></i></button>
+            class="ri-contrast-line"></i></button>
     <header class="header">
         <div class="content-container">
             <div class="header__wrapper">
                 <div class="brand"><a href="../index.html"><span>Tech</span>Innovators</a></div>
-                <!-- <div class="mobile-menu">
-                    <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="fas fa-bars"></i></button>
+                <div class="menu">
+                    <button class="btn__menu" id="btn__menu" aria-label="Menu"><i class="ri-menu-3-line"></i></button>
                     <div class="overlay hide"></div>
-                    <nav class="mobile-nav">
-                        <div class="content-container">
-                            <div class="mobile-nav__button">
-                                <button class="btn__close" id="btn__close" aria-label="Close menu"><i
-                                        class="far fa-times-circle"></i></button>
-                            </div>
-                        </div>
-                        <ul class="mobile-nav__items">
-                            <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
-                            <li class="mobile-nav__item"><a href="programs.html">Programs</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
-                <!-- <div class="menu">
                     <nav class="nav">
+                        <div class="nav__close">
+                            <button class="btn__close" id="btn__close" aria-label="Close menu"><i
+                                    class="ri-close-line"></i></button>
+                        </div>
                         <ul class="nav__items">
-                            <li class="nav__item"><a href="../index.html">Home</a></li>
-                            <li class="nav__item"><a href="programs.html">Programs</a></li>
+                            <li class="nav__item active"><a href="../index.html"><i
+                                        class="ri-home-line"></i><span>Home</span></a>
+                            </li>
+                            <li class="nav__item programs"><a href="#programs"><i
+                                        class="ri-apps-line"></i><span>Programs</span></a>
+                                <ul class="programs__items hide">
+                                    <li class="programs__item"><a href="school-student.html">For School
+                                            Students</a></li>
+                                    <li class="programs__item"><a href="#">For College Students</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
-                </div> -->
+                </div>
             </div>
         </div>
     </header>
@@ -86,11 +85,11 @@
                         </div>
                         <ul class="teammate__social">
                             <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="ri-facebook-circle-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
+                                        class="ri-twitter-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div>
                     <!-- <div class="teammate__card">
@@ -103,12 +102,9 @@
                             <p class="teammate__about"></p>
                         </div>
                         <ul class="teammate__social">
-                            <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
-                            <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
-                            <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i class="ri-facebook-circle-fill"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i class="ri-twitter-fill"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div> -->
                     <div class="teammate__card">
@@ -122,11 +118,11 @@
                         </div>
                         <ul class="teammate__social">
                             <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="ri-facebook-circle-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
+                                        class="ri-twitter-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div>
                     <!-- <div class="teammate__card">
@@ -139,12 +135,9 @@
                             <p class="teammate__about">Has immense knowledge and experience in robotics and IOT.</p>
                         </div>
                         <ul class="teammate__social">
-                            <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
-                            <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
-                            <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i class="ri-facebook-circle-fill"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i class="ri-twitter-fill"></i></a></li>
+                            <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div> -->
                     <div class="teammate__card">
@@ -158,11 +151,11 @@
                         </div>
                         <ul class="teammate__social">
                             <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="ri-facebook-circle-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
+                                        class="ri-twitter-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div>
                     <div class="teammate__card">
@@ -176,11 +169,11 @@
                         </div>
                         <ul class="teammate__social">
                             <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="ri-facebook-circle-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
+                                        class="ri-twitter-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div>
                     <div class="teammate__card">
@@ -194,11 +187,11 @@
                         </div>
                         <ul class="teammate__social">
                             <li class="teammate__social-link"><a href="#" class="teammate__facebook" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="ri-facebook-circle-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__twitter"><i
-                                        class="fab fa-twitter" target="_blank"></i></a></li>
+                                        class="ri-twitter-fill"></i></a></li>
                             <li class="teammate__social-link"><a href="#" class="teammate__linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="ri-linkedin-box-fill"></i></a></li>
                         </ul>
                     </div>
                 </div>
