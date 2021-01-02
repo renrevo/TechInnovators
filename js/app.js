@@ -37,6 +37,12 @@ overlay.addEventListener('click', () => {
     navToggler();
 });
 
+// Testimony toggler
+
+const parents = document.getElementById('parents');
+const students = document.getElementById('parents');
+const clients = document.getElementById('clients');
+
 // Service Worker for PWA
 
 // if ('serviceWorker' in navigator) {
