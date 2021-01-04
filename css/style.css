@@ -420,17 +420,20 @@
 }
 
 .theme__light .hero, .theme__light
-.about-us {
+.about-us, .theme__light
+.school-student {
   background-color: #ebf5ff;
 }
 
 .theme__dark .hero, .theme__dark
-.about-us {
+.about-us, .theme__dark
+.school-student {
   background-color: #001429;
 }
 
 .hero__wrapper,
-.about-us__wrapper {
+.about-us__wrapper,
+.school-student__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,24 +452,28 @@
 }
 
 .hero__text,
-.about-us__text {
+.about-us__text,
+.school-student__text {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .theme__light .hero__text, .theme__light
-.about-us__text {
+.about-us__text, .theme__light
+.school-student__text {
   color: #000000;
 }
 
 .theme__dark .hero__text, .theme__dark
-.about-us__text {
+.about-us__text, .theme__dark
+.school-student__text {
   color: #ffffff;
 }
 
 .hero__heading,
-.about-us__heading {
+.about-us__heading,
+.school-student__heading {
   line-height: 1;
   font-size: 3rem;
   font-weight: 700;
@@ -474,7 +481,8 @@
 }
 
 .hero__description,
-.about-us__description {
+.about-us__description,
+.school-student__description {
   margin-top: 0.75rem;
   line-height: 1.5;
   font-size: 1.25rem;
@@ -483,13 +491,15 @@
 }
 
 .hero__illustration,
-.about-us__illustration {
+.about-us__illustration,
+.school-student__illustration {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .hero__illustration img,
-.about-us__illustration img {
+.about-us__illustration img,
+.school-student__illustration img {
   width: 100%;
 }
 
@@ -1336,27 +1346,32 @@
     padding-right: 2.25rem;
   }
   .hero__wrapper,
-  .about-us__wrapper {
+  .about-us__wrapper,
+  .school-student__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
   .hero__text,
-  .about-us__text {
+  .about-us__text,
+  .school-student__text {
     width: 50%;
     text-align: start;
   }
   .hero__heading,
-  .about-us__heading {
+  .about-us__heading,
+  .school-student__heading {
     font-size: 4rem;
   }
   .hero__description,
-  .about-us__description {
+  .about-us__description,
+  .school-student__description {
     font-size: 1.5rem;
   }
   .hero__illustration,
-  .about-us__illustration {
+  .about-us__illustration,
+  .school-student__illustration {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1366,7 +1381,8 @@
             justify-content: center;
   }
   .hero__illustration img,
-  .about-us__illustration img {
+  .about-us__illustration img,
+  .school-student__illustration img {
     width: 84%;
   }
   .services__content {
@@ -1420,12 +1436,14 @@
   .teach-with-us__description {
     padding-right: 3rem;
   }
-  .about-us__text {
+  .about-us__text,
+  .school-student__text {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .about-us__illustration {
+  .about-us__illustration,
+  .school-student__illustration {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;

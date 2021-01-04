@@ -349,7 +349,8 @@
 
 
 .hero,
-.about-us {
+.about-us,
+.school-student {
 
     @include themify($themes) {
         background-color: themed('backgroundColorPrimary');
@@ -1157,7 +1158,8 @@
     }
 
     .hero,
-    .about-us {
+    .about-us,
+    .school-student {
 
         &__wrapper {
             flex-direction: row;
@@ -1256,7 +1258,8 @@
 
     }
 
-    .about-us {
+    .about-us,
+    .school-student {
 
         &__text {
             order: 2;
