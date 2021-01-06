@@ -738,8 +738,7 @@
     &__cards {
         display: grid;
         grid-gap: 3rem;
-        margin-top: $margin * 4;
-        margin-bottom: $margin * 4;
+        margin-top: $margin * 6;
     }
 
 }
@@ -958,11 +957,11 @@
         border-top: $border-thin solid $color-white;
     }
 
-    &__links {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 2rem;
-    }
+    // &__links {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr 1fr;
+    //     grid-column-gap: 2rem;
+    // }
 
     &__link {
         font-size: $t6;
@@ -1307,9 +1306,7 @@
 
         &__cards {
             @include cards(20rem);
-            grid-gap: 3rem;
-            margin-top: $margin * 4;
-            margin-bottom: $margin * 4;
+            grid-gap: 4rem;
         }
 
     }
@@ -1375,6 +1372,10 @@
         &__wrapper {
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 2rem;
+        }
+
+        &__links {
+            text-align: center;
         }
 
     }

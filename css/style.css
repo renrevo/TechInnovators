@@ -966,8 +966,7 @@
   display: -ms-grid;
   display: grid;
   grid-gap: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4.5rem;
 }
 
 .author {
@@ -1214,14 +1213,6 @@
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-top: 1px solid #ffffff;
-}
-
-.footer__links {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 2rem;
 }
 
 .footer__link {
@@ -1510,9 +1501,7 @@
     display: grid;
     -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-gap: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    grid-gap: 4rem;
   }
   .features__list {
     display: -ms-grid;
@@ -1562,6 +1551,9 @@
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
+  }
+  .footer__links {
+    text-align: center;
   }
   .social,
   .company {
