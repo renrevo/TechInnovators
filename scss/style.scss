@@ -406,6 +406,10 @@
 
 .section {
 
+    &__text {
+        margin-bottom: $margin * 4;
+    }
+
     &__heading {
         margin-bottom: $margin * 2;
         text-align: center;
@@ -420,7 +424,6 @@
     }
 
     &__description {
-        margin-bottom: $margin * 4;
         text-align: center;
         font-size: $t4;
         font-weight: $font-weight-medium;
@@ -437,6 +440,7 @@
 .services,
 .advantages,
 .testimonials,
+.features,
 .stem,
 .members {
     padding-top: $padding * 8;
@@ -539,6 +543,56 @@
         font-weight: $font-weight-semiBold;
         // padding-bottom: $padding * 0.25;
         // border-bottom: $border-medium solid $border-color;
+    }
+
+    &__description {
+        font-size: $t4;
+        margin-top: $margin;
+    }
+
+}
+
+.features {
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+    }
+
+}
+
+.feature {
+    padding: $padding * 2;
+    display: flex;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorPrimary');
+        color: themed('textColor');
+    }
+
+    &__icon {
+        min-width: 2rem;
+        display: flex;
+        justify-content: center;
+        margin-right: $margin * 0.5;
+
+        @include themify($themes) {
+            color: themed('colorPrimary');
+        }
+
+        i {
+            font-size: $i3;
+        }
+
+    }
+
+    &__heading {
+        font-size: $t3;
     }
 
     &__description {
@@ -667,10 +721,20 @@
     }
 
     &__cards {
-        @include cards(18rem);
+        display: grid;
         grid-gap: 3rem;
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
+    }
+
+}
+
+.quote-text {
+
+    &::before,
+    &::after {
+        content: "\22";
+        font-weight: $font-weight-bold;
     }
 
 }
@@ -1196,7 +1260,7 @@
         &__content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-column-gap: 6rem;
+            grid-column-gap: 3rem;
         }
 
         &__description {
@@ -1209,7 +1273,7 @@
         }
 
         &__offered {
-            @include cards(14rem);
+            @include cards(16rem);
             grid-column-gap: 6rem;
             grid-row-gap: 3rem;
         }
@@ -1227,6 +1291,32 @@
             height: 8rem;
         }
 
+    }
+
+    .testimony {
+        padding: $padding * 3;
+
+        &__cards {
+            @include cards(20rem);
+            grid-gap: 3rem;
+            margin-top: $margin * 4;
+            margin-bottom: $margin * 4;
+        }
+    
+    }
+
+    .features {
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 6rem;
+        }
+
+    }
+
+    .feature {
+        padding: $padding * 3;
     }
 
     .stem {

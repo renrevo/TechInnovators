@@ -503,6 +503,10 @@
   width: 100%;
 }
 
+.section__text {
+  margin-bottom: 3rem;
+}
+
 .section__heading {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -520,7 +524,6 @@
 }
 
 .section__description {
-  margin-bottom: 3rem;
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
@@ -538,6 +541,7 @@
 .services,
 .advantages,
 .testimonials,
+.features,
 .stem,
 .members {
   padding-top: 6rem;
@@ -654,6 +658,71 @@
 }
 
 .service__description {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+.theme__light .features {
+  background-color: #ffffff;
+}
+
+.theme__dark .features {
+  background-color: #002447;
+}
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.theme__light .feature {
+  background-color: #ebf5ff;
+  color: #000000;
+}
+
+.theme__dark .feature {
+  background-color: #001429;
+  color: #ffffff;
+}
+
+.feature__icon {
+  min-width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.375rem;
+}
+
+.theme__light .feature__icon {
+  color: #0057ad;
+}
+
+.theme__dark .feature__icon {
+  color: #a3d1ff;
+}
+
+.feature__icon i {
+  font-size: 1.25rem;
+}
+
+.feature__heading {
+  font-size: 1.25rem;
+}
+
+.feature__description {
   font-size: 1rem;
   margin-top: 0.75rem;
 }
@@ -878,11 +947,14 @@
 .testimony__cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   grid-gap: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.quote-text::before, .quote-text::after {
+  content: "\22";
+  font-weight: 700;
 }
 
 .author {
@@ -1390,7 +1462,7 @@
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
-    grid-column-gap: 6rem;
+    grid-column-gap: 3rem;
   }
   .services__description {
     text-align: start;
@@ -1401,8 +1473,8 @@
   .services__offered {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(14rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     grid-column-gap: 6rem;
     grid-row-gap: 3rem;
   }
@@ -1413,6 +1485,28 @@
   }
   .advantage__illustration {
     height: 8rem;
+  }
+  .testimony {
+    padding: 2.25rem;
+  }
+  .testimony__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .features__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6rem;
+  }
+  .feature {
+    padding: 2.25rem;
   }
   .stem__cards {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
