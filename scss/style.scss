@@ -529,20 +529,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: $border-medium solid $border-color;
         border-radius: $border-radius-medium;
         margin-bottom: $margin;
+        border-width: $border-medium;
+        border-style: solid;
+
+        @include themify($themes) {
+            border-color: themed('colorPrimary');
+        }
 
         i {
             font-size: $i2;
+
+            @include themify($themes) {
+                color: themed('colorPrimary');
+            }
+
         }
+
     }
 
     &__heading {
-        font-size: $t4;
+        font-size: $t3;
         font-weight: $font-weight-semiBold;
-        // padding-bottom: $padding * 0.25;
-        // border-bottom: $border-medium solid $border-color;
     }
 
     &__description {

@@ -643,17 +643,34 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px solid #b8b8b8;
   border-radius: 1rem;
   margin-bottom: 0.75rem;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.theme__light .service__icon {
+  border-color: #0057ad;
+}
+
+.theme__dark .service__icon {
+  border-color: #a3d1ff;
 }
 
 .service__icon i {
   font-size: 1.5rem;
 }
 
+.theme__light .service__icon i {
+  color: #0057ad;
+}
+
+.theme__dark .service__icon i {
+  color: #a3d1ff;
+}
+
 .service__heading {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
