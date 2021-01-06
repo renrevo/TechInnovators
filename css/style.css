@@ -508,7 +508,7 @@
 }
 
 .section__heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -527,7 +527,7 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 2;
+  line-height: 1.6;
 }
 
 .theme__light .section__description {
@@ -929,6 +929,7 @@
 }
 
 .testimony {
+  position: relative;
   padding: 1.5rem;
   border-radius: 2rem;
   border-top-left-radius: 0;
@@ -944,17 +945,29 @@
   color: #ffffff;
 }
 
+.testimony::before {
+  position: absolute;
+  top: -6rem;
+  content: "\201C";
+  font-family: "Oswald", sans-serif;
+  font-size: 12rem;
+  font-weight: 700;
+}
+
+.theme__light .testimony::before {
+  color: #0057ad;
+}
+
+.theme__dark .testimony::before {
+  color: #a3d1ff;
+}
+
 .testimony__cards {
   display: -ms-grid;
   display: grid;
   grid-gap: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-
-.quote-text::before, .quote-text::after {
-  content: "\22";
-  font-weight: 700;
 }
 
 .author {
@@ -1477,6 +1490,9 @@
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     grid-column-gap: 6rem;
     grid-row-gap: 3rem;
+  }
+  .service {
+    padding: 2.25rem;
   }
   .advantage__cards {
     -ms-grid-columns: 1fr 1fr 1fr;

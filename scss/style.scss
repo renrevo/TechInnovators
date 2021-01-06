@@ -411,7 +411,7 @@
     }
 
     &__heading {
-        margin-bottom: $margin * 2;
+        margin-bottom: $margin;
         text-align: center;
         font-size: $t2;
         font-weight: $font-weight-bold;
@@ -427,7 +427,7 @@
         text-align: center;
         font-size: $t4;
         font-weight: $font-weight-medium;
-        line-height: 2;
+        line-height: 1.6;
 
         @include themify($themes) {
             color: themed('textColor');
@@ -711,6 +711,7 @@
 }
 
 .testimony {
+    position: relative;
     padding: $padding * 2;
     border-radius: $border-radius-large;
     border-top-left-radius: 0;
@@ -720,21 +721,25 @@
         color: themed('textColor');
     }
 
+    &::before {
+        position: absolute;
+        top: -6rem;
+        content: "\201C";
+        font-family: $font-family-heading;
+        font-size: 12rem;
+        font-weight: $font-weight-bold;
+
+        @include themify($themes) {
+            color: themed('colorPrimary');
+        }
+
+    }
+
     &__cards {
         display: grid;
         grid-gap: 3rem;
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
-    }
-
-}
-
-.quote-text {
-
-    &::before,
-    &::after {
-        content: "\22";
-        font-weight: $font-weight-bold;
     }
 
 }
@@ -1280,6 +1285,10 @@
 
     }
 
+    .service {
+        padding: $padding * 3;
+    }
+
     .advantage {
 
         &__cards {
@@ -1302,7 +1311,7 @@
             margin-top: $margin * 4;
             margin-bottom: $margin * 4;
         }
-    
+
     }
 
     .features {
