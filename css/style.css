@@ -471,25 +471,6 @@
   color: #ffffff;
 }
 
-.hero__heading,
-.about-us__heading,
-.school-student__heading {
-  line-height: 1;
-  font-size: 3rem;
-  font-weight: 700;
-  font-family: "Oswald", sans-serif;
-}
-
-.hero__description,
-.about-us__description,
-.school-student__description {
-  margin-top: 0.75rem;
-  line-height: 1.5;
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-}
-
 .hero__illustration,
 .about-us__illustration,
 .school-student__illustration {
@@ -501,6 +482,16 @@
 .about-us__illustration img,
 .school-student__illustration img {
   width: 100%;
+}
+
+.hero__heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero__sub-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .section__text {
@@ -616,6 +607,10 @@
   display: -ms-grid;
   display: grid;
   grid-row-gap: 2.25rem;
+}
+
+.color-primary {
+  color: #0080FF;
 }
 
 .service {
@@ -1452,16 +1447,6 @@
     width: 50%;
     text-align: start;
   }
-  .hero__heading,
-  .about-us__heading,
-  .school-student__heading {
-    font-size: 4rem;
-  }
-  .hero__description,
-  .about-us__description,
-  .school-student__description {
-    font-size: 1.5rem;
-  }
   .hero__illustration,
   .about-us__illustration,
   .school-student__illustration {
@@ -1477,6 +1462,12 @@
   .about-us__illustration img,
   .school-student__illustration img {
     width: 84%;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__sub-heading {
+    font-size: 2.5rem;
   }
   .services__content {
     display: -ms-grid;
