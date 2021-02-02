@@ -408,13 +408,12 @@
 
     &__heading {
         font-size: $t1;
-        font-weight: $font-weight-bold;
-
+        font-weight: $font-weight-extraBold;
+        line-height: 1.2;
     }
 
-    &__sub-heading {
-        font-size: $t2;
-        font-weight: $font-weight-bold;
+    span {
+        border-bottom: $border-thick solid $color-primary;
     }
 
 }
@@ -530,10 +529,6 @@
 
 }
 
-.color-primary {
-    color: $color-primary;
-}
-
 .service {
     padding: $padding * 2;
     border-radius: $border-radius-large;
@@ -578,6 +573,10 @@
         margin-top: $margin;
     }
 
+}
+
+.color-primary {
+    color: $color-primary;
 }
 
 .features {
@@ -795,6 +794,7 @@
         }
 
     }
+
 }
 
 .teach-with-us {
@@ -1291,13 +1291,13 @@
 
         &__heading {
             font-size: 3rem;
-    
+
         }
-    
+
         &__sub-heading {
             font-size: 2.5rem;
         }
-    
+
     }
 
     .services {

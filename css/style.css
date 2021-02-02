@@ -486,12 +486,12 @@
 
 .hero__heading {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-.hero__sub-heading {
-  font-size: 1.5rem;
-  font-weight: 700;
+.hero span {
+  border-bottom: 4px solid #0080FF;
 }
 
 .section__text {
@@ -609,10 +609,6 @@
   grid-row-gap: 2.25rem;
 }
 
-.color-primary {
-  color: #0080FF;
-}
-
 .service {
   padding: 1.5rem;
   border-radius: 2rem;
@@ -672,6 +668,10 @@
 .service__description {
   font-size: 1rem;
   margin-top: 0.75rem;
+}
+
+.color-primary {
+  color: #0080FF;
 }
 
 .theme__light .features {
