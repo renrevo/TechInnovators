@@ -800,7 +800,7 @@
 .teach-with-us {
 
     @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
+        background-color: themed('backgroundColorPrimary');
     }
 
     &__content {
@@ -812,7 +812,7 @@
         transform: translateY(4rem);
 
         @include themify($themes) {
-            background-color: themed('backgroundColorPrimary');
+            background-color: themed('backgroundColorSecondary');
             color: themed('textColor');
         }
 
@@ -1305,7 +1305,7 @@
         &__content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-column-gap: 3rem;
+            grid-column-gap: 6rem;
         }
 
         &__description {
@@ -1315,6 +1315,8 @@
 
         &__heading {
             font-size: $t1;
+            padding-top: $padding * 3;
+            padding-bottom: $padding * 3;
         }
 
         &__offered {

@@ -1022,11 +1022,11 @@
 }
 
 .theme__light .teach-with-us {
-  background-color: #ffffff;
+  background-color: #ebf5ff;
 }
 
 .theme__dark .teach-with-us {
-  background-color: #002447;
+  background-color: #001429;
 }
 
 .teach-with-us__content {
@@ -1047,12 +1047,12 @@
 }
 
 .theme__light .teach-with-us__content {
-  background-color: #ebf5ff;
+  background-color: #ffffff;
   color: #000000;
 }
 
 .theme__dark .teach-with-us__content {
-  background-color: #001429;
+  background-color: #002447;
   color: #ffffff;
 }
 
@@ -1474,13 +1474,15 @@
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
-    grid-column-gap: 3rem;
+    grid-column-gap: 6rem;
   }
   .services__description {
     text-align: start;
   }
   .services__heading {
     font-size: 2rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
   .services__offered {
     display: -ms-grid;
