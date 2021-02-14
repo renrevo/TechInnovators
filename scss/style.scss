@@ -479,6 +479,12 @@
     &__heading {
         font-size: $t3;
         margin-bottom: $margin * 4;
+        text-align: center;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
     }
 
     &__cards {
@@ -1299,7 +1305,8 @@
 
         &__heading {
             font-size: $t2;
-            margin: 0
+            margin: 0;
+            text-align: start;
         }
 
         &__cards {

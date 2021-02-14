@@ -570,6 +570,15 @@
 .stem__heading {
   font-size: 1.25rem;
   margin-bottom: 3rem;
+  text-align: center;
+}
+
+.theme__light .stem__heading {
+  color: #000000;
+}
+
+.theme__dark .stem__heading {
+  color: #ffffff;
 }
 
 .stem__cards {
@@ -1488,6 +1497,7 @@
   .stem__heading {
     font-size: 1.5rem;
     margin: 0;
+    text-align: start;
   }
   .stem__cards {
     display: -ms-grid;
