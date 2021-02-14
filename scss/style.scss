@@ -87,22 +87,6 @@
 
 }
 
-.anchor {
-
-    &__enroll {
-        display: inline-block;
-        @include button-colored;
-        margin: $margin * 2 auto;
-    }
-
-    &__careers {
-        display: inline-block;
-        @include button-bordered;
-        margin-top: $margin * 2;
-    }
-
-}
-
 .body {
     font-family: $font-family-text;
     min-height: 100%;
@@ -111,19 +95,6 @@
     grid-template-areas: "header"
         "main"
         "footer";
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hide {
-    display: none;
 }
 
 .header {
@@ -297,6 +268,19 @@
 
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+    display: none;
+}
+
 .programs {
 
     &:hover {
@@ -343,10 +327,9 @@
 }
 
 .content-container {
-    padding-left: $padding * 1.5;
-    padding-right: $padding * 1.5;
+    padding-left: $padding * 2;
+    padding-right: $padding * 2;
 }
-
 
 .hero,
 .about-us,
@@ -356,8 +339,7 @@
         background-color: themed('backgroundColorPrimary');
     }
 
-    &__wrapper {
-        // min-height: 100vh;
+    &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -377,21 +359,6 @@
 
     }
 
-    // &__heading {
-    //     line-height: 1;
-    //     font-size: 3rem;
-    //     font-weight: $font-weight-bold;
-    //     font-family: $font-family-heading;
-    // }
-
-    // &__description {
-    //     margin-top: $margin;
-    //     line-height: 1.5;
-    //     font-size: $t3;
-    //     font-weight: $font-weight-medium;
-    //     font-family: $font-family-text;
-    // }
-
     &__illustration {
         margin-top: $margin * 2;
         margin-bottom: $margin * 2;
@@ -410,10 +377,38 @@
         font-size: $t1;
         font-weight: $font-weight-extraBold;
         line-height: 1.2;
+
+        span {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 6px;
+                background-color: $color-primary;
+                position: absolute;
+                top: 84%;
+                left: 0;
+            }
+
+        }
+
     }
 
-    span {
-        border-bottom: $border-thick solid $color-primary;
+}
+
+.anchor {
+
+    &__enroll {
+        display: inline-block;
+        @include button-colored;
+        margin: $margin * 2 auto;
+    }
+
+    &__careers {
+        display: inline-block;
+        @include button-bordered;
+        margin-top: $margin * 2;
     }
 
 }
@@ -451,30 +446,39 @@
 
 }
 
-.services,
-.advantages,
-.testimonials,
-.features,
 .stem,
+.services,
+.testimonials,
+.advantages,
+.features,
 .members {
     padding-top: $padding * 8;
     padding-bottom: $padding * 8;
 }
 
-.advantages {
+.card {
+
+    &__heading {
+        font-size: $t3;
+        font-weight: $font-weight-semiBold;
+    }
+
+    &__description {
+        font-size: $t4;
+        margin-top: $margin;
+    }
+
+}
+
+.stem {
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
     }
 
-}
-
-.advantage {
-    text-align: center;
-    padding: $padding;
-
-    @include themify($themes) {
-        color: themed('textColor');
+    &__heading {
+        font-size: $t3;
+        margin-bottom: $margin * 4;
     }
 
     &__cards {
@@ -482,24 +486,31 @@
         grid-row-gap: 3rem;
     }
 
-    &__illustration {
+    &__card {
+        padding: 24px;
+        border-top-right-radius: 3rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
 
-        img {
-            width: 100%;
-            height: 100%;
+        @include themify($themes) {
+            background-color: themed('backgroundColorPrimary');
+            color: themed('textColor');
         }
 
     }
 
-    &__heading {
-        margin-top: $margin * 3;
-        margin-bottom: $margin;
-        font-size: $t3;
-        font-weight: $font-weight-bold;
-    }
+    &__illustration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $margin * 2;
 
-    &__explanation {
-        font-size: $t4;
+        img {
+            width: 100%;
+            height: 8rem;
+        }
+
     }
 
 }
@@ -511,30 +522,19 @@
         color: themed('textColor');
     }
 
-    &__description {
-        text-align: center;
-        margin-bottom: $margin * 4;
-    }
-
-    &__heading {
-        font-size: $t2;
-        font-weight: $font-weight-extraBold;
-        line-height: 1.2;
-    }
-
     &__offered {
         display: grid;
         grid-row-gap: $margin * 3;
     }
 
-}
+    &__card {
+        padding: $padding * 2;
+        border-radius: $border-radius-large;
 
-.service {
-    padding: $padding * 2;
-    border-radius: $border-radius-large;
+        @include themify($themes) {
+            background-color: themed('backgroundColorSecondary');
+        }
 
-    @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
     }
 
     &__icon {
@@ -563,120 +563,10 @@
 
     }
 
-    &__heading {
-        font-size: $t3;
-        font-weight: $font-weight-semiBold;
-    }
-
-    &__description {
-        font-size: $t4;
-        margin-top: $margin;
-    }
-
 }
 
 .color-primary {
     color: $color-primary;
-}
-
-.features {
-
-    @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
-    }
-
-    &__list {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-    }
-
-}
-
-.feature {
-    padding: $padding * 2;
-    display: flex;
-
-    @include themify($themes) {
-        background-color: themed('backgroundColorPrimary');
-        color: themed('textColor');
-    }
-
-    &__icon {
-        min-width: 2rem;
-        display: flex;
-        justify-content: center;
-        margin-right: $margin * 0.5;
-
-        @include themify($themes) {
-            color: themed('colorPrimary');
-        }
-
-        i {
-            font-size: $i3;
-        }
-
-    }
-
-    &__heading {
-        font-size: $t3;
-    }
-
-    &__description {
-        font-size: $t4;
-        margin-top: $margin;
-    }
-
-}
-
-.stem {
-
-    @include themify($themes) {
-        background-color: themed('backgroundColorSecondary');
-    }
-
-    &__cards {
-        display: grid;
-        grid-row-gap: 3rem;
-    }
-
-    &__card {
-        padding: 24px;
-        // border: $border-thin solid $color-primary;
-        border-top-right-radius: 3rem;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-
-        @include themify($themes) {
-            background-color: themed('backgroundColorPrimary');
-            color: themed('textColor');
-        }
-
-    }
-
-    &__illustration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            width: 100%;
-            height: 8rem;
-        }
-
-    }
-
-    &__heading {
-        font-size: $t3;
-        margin-top: $margin * 2;
-    }
-
-    &__description {
-        font-size: $t4;
-        margin-top: $margin;
-    }
-
 }
 
 .carousel {
@@ -840,8 +730,100 @@
 
 }
 
-.members {
+.advantages {
 
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+    }
+
+}
+
+.advantage {
+    text-align: center;
+    padding: $padding;
+
+    @include themify($themes) {
+        color: themed('textColor');
+    }
+
+    &__cards {
+        display: grid;
+        grid-row-gap: 3rem;
+    }
+
+    &__illustration {
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__heading {
+        margin-top: $margin * 3;
+        margin-bottom: $margin;
+        font-size: $t3;
+        font-weight: $font-weight-bold;
+    }
+
+    &__explanation {
+        font-size: $t4;
+    }
+
+}
+
+.features {
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorSecondary');
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+    }
+
+}
+
+.feature {
+    padding: $padding * 2;
+    display: flex;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColorPrimary');
+        color: themed('textColor');
+    }
+
+    &__icon {
+        min-width: 2rem;
+        display: flex;
+        justify-content: center;
+        margin-right: $margin * 0.5;
+
+        @include themify($themes) {
+            color: themed('colorPrimary');
+        }
+
+        i {
+            font-size: $i3;
+        }
+
+    }
+
+    &__heading {
+        font-size: $t3;
+    }
+
+    &__description {
+        font-size: $t4;
+        margin-top: $margin;
+    }
+
+}
+
+.members {
 
     @include themify($themes) {
         background-color: themed('backgroundColorSecondary');
@@ -1251,15 +1233,15 @@
     .content-container {
         max-width: 90rem;
         margin: 0 auto;
-        padding-left: $padding * 3;
-        padding-right: $padding * 3;
+        padding-left: $padding * 4;
+        padding-right: $padding * 4;
     }
 
     .hero,
     .about-us,
     .school-student {
 
-        &__wrapper {
+        &__content {
             flex-direction: row;
         }
 
@@ -1267,14 +1249,6 @@
             width: 50%;
             text-align: start;
         }
-
-        // &__heading {
-        //     font-size: 4rem;
-        // }
-
-        // &__description {
-        //     font-size: $t2;
-        // }
 
         &__illustration {
             width: 50%;
@@ -1285,6 +1259,19 @@
                 width: 84%;
             }
 
+        }
+
+    }
+
+    .about-us,
+    .school-student {
+
+        &__text {
+            order: 2;
+        }
+
+        &__illustration {
+            order: 1;
         }
 
     }
@@ -1302,7 +1289,7 @@
 
     }
 
-    .services {
+    .stem {
 
         &__content {
             display: grid;
@@ -1310,15 +1297,23 @@
             grid-column-gap: 6rem;
         }
 
+        &__heading {
+            font-size: $t2;
+            margin: 0
+        }
+
+        &__cards {
+            @include cards(16rem);
+            grid-gap: 3rem;
+        }
+
+    }
+
+    .services {
+
         &__description {
             text-align: start;
             // align-self: center;
-        }
-
-        &__heading {
-            font-size: $t1;
-            padding-top: $padding * 3;
-            padding-bottom: $padding * 3;
         }
 
         &__offered {
@@ -1329,52 +1324,12 @@
 
     }
 
-    .service {
-        padding: $padding * 3;
-    }
-
-    .advantage {
-
-        &__cards {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 2rem;
-        }
-
-        &__illustration {
-            height: 8rem;
-        }
-
-    }
-
     .testimony {
         padding: $padding * 3;
 
         &__cards {
             @include cards(20rem);
             grid-gap: 4rem;
-        }
-
-    }
-
-    .features {
-
-        &__list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 6rem;
-        }
-
-    }
-
-    .feature {
-        padding: $padding * 3;
-    }
-
-    .stem {
-
-        &__cards {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-column-gap: 3rem;
         }
 
     }
@@ -1399,17 +1354,31 @@
 
     }
 
-    .about-us,
-    .school-student {
+    .advantage {
 
-        &__text {
-            order: 2;
+        &__cards {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 2rem;
         }
 
         &__illustration {
-            order: 1;
+            height: 8rem;
         }
 
+    }
+
+    .features {
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 6rem;
+        }
+
+    }
+
+    .feature {
+        padding: $padding * 3;
     }
 
     .footer {

@@ -128,28 +128,6 @@
   border: 2px solid rgba(255, 255, 255, 0.72);
 }
 
-.anchor__enroll {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.9375rem 2.25rem;
-  border-radius: 1rem;
-  background-color: #0080FF;
-  color: #ffffff;
-  margin: 1.5rem auto;
-}
-
-.anchor__careers {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.9375rem 2.25rem;
-  border-radius: 1rem;
-  border: 2px solid #0080FF;
-  color: #0080FF;
-  margin-top: 1.5rem;
-}
-
 .body {
   font-family: "Montserrat", sans-serif;
   min-height: 100%;
@@ -158,19 +136,6 @@
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
       grid-template-areas: "header" "main" "footer";
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hide {
-  display: none;
 }
 
 .header {
@@ -372,6 +337,19 @@
   background-color: #006cd6;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  display: none;
+}
+
 .programs:hover .programs__items {
   display: block;
 }
@@ -415,8 +393,8 @@
 }
 
 .content-container {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .theme__light .hero, .theme__light
@@ -431,9 +409,9 @@
   background-color: #001429;
 }
 
-.hero__wrapper,
-.about-us__wrapper,
-.school-student__wrapper {
+.hero__content,
+.about-us__content,
+.school-student__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,8 +468,40 @@
   line-height: 1.2;
 }
 
-.hero span {
-  border-bottom: 4px solid #0080FF;
+.hero__heading span {
+  position: relative;
+}
+
+.hero__heading span::after {
+  content: '';
+  width: 100%;
+  height: 6px;
+  background-color: #0080FF;
+  position: absolute;
+  top: 84%;
+  left: 0;
+}
+
+.anchor__enroll {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.9375rem 2.25rem;
+  border-radius: 1rem;
+  background-color: #0080FF;
+  color: #ffffff;
+  margin: 1.5rem auto;
+}
+
+.anchor__careers {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.9375rem 2.25rem;
+  border-radius: 1rem;
+  border: 2px solid #0080FF;
+  color: #0080FF;
+  margin-top: 1.5rem;
 }
 
 .section__text {
@@ -529,212 +539,22 @@
   color: #ffffff;
 }
 
-.services,
-.advantages,
-.testimonials,
-.features,
 .stem,
+.services,
+.testimonials,
+.advantages,
+.features,
 .members {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-.theme__light .advantages {
-  background-color: #ffffff;
-}
-
-.theme__dark .advantages {
-  background-color: #002447;
-}
-
-.advantage {
-  text-align: center;
-  padding: 0.75rem;
-}
-
-.theme__light .advantage {
-  color: #000000;
-}
-
-.theme__dark .advantage {
-  color: #ffffff;
-}
-
-.advantage__cards {
-  display: -ms-grid;
-  display: grid;
-  grid-row-gap: 3rem;
-}
-
-.advantage__illustration img {
-  width: 100%;
-  height: 100%;
-}
-
-.advantage__heading {
-  margin-top: 2.25rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.advantage__explanation {
-  font-size: 1rem;
-}
-
-.theme__light .services {
-  background-color: #ebf5ff;
-  color: #000000;
-}
-
-.theme__dark .services {
-  background-color: #001429;
-  color: #ffffff;
-}
-
-.services__description {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.services__heading {
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.services__offered {
-  display: -ms-grid;
-  display: grid;
-  grid-row-gap: 2.25rem;
-}
-
-.service {
-  padding: 1.5rem;
-  border-radius: 2rem;
-}
-
-.theme__light .service {
-  background-color: #ffffff;
-}
-
-.theme__dark .service {
-  background-color: #002447;
-}
-
-.service__icon {
-  width: 3rem;
-  height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 1rem;
-  margin-bottom: 0.75rem;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.theme__light .service__icon {
-  border-color: #0057ad;
-}
-
-.theme__dark .service__icon {
-  border-color: #a3d1ff;
-}
-
-.service__icon i {
-  font-size: 1.5rem;
-}
-
-.theme__light .service__icon i {
-  color: #0057ad;
-}
-
-.theme__dark .service__icon i {
-  color: #a3d1ff;
-}
-
-.service__heading {
+.card__heading {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.service__description {
-  font-size: 1rem;
-  margin-top: 0.75rem;
-}
-
-.color-primary {
-  color: #0080FF;
-}
-
-.theme__light .features {
-  background-color: #ffffff;
-}
-
-.theme__dark .features {
-  background-color: #002447;
-}
-
-.features__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-row-gap: 3rem;
-}
-
-.feature {
-  padding: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.theme__light .feature {
-  background-color: #ebf5ff;
-  color: #000000;
-}
-
-.theme__dark .feature {
-  background-color: #001429;
-  color: #ffffff;
-}
-
-.feature__icon {
-  min-width: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: 0.375rem;
-}
-
-.theme__light .feature__icon {
-  color: #0057ad;
-}
-
-.theme__dark .feature__icon {
-  color: #a3d1ff;
-}
-
-.feature__icon i {
-  font-size: 1.25rem;
-}
-
-.feature__heading {
-  font-size: 1.25rem;
-}
-
-.feature__description {
+.card__description {
   font-size: 1rem;
   margin-top: 0.75rem;
 }
@@ -745,6 +565,11 @@
 
 .theme__dark .stem {
   background-color: #002447;
+}
+
+.stem__heading {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
 }
 
 .stem__cards {
@@ -781,6 +606,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .stem__illustration img {
@@ -788,14 +614,75 @@
   height: 8rem;
 }
 
-.stem__heading {
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
+.theme__light .services {
+  background-color: #ebf5ff;
+  color: #000000;
 }
 
-.stem__description {
-  font-size: 1rem;
-  margin-top: 0.75rem;
+.theme__dark .services {
+  background-color: #001429;
+  color: #ffffff;
+}
+
+.services__offered {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 2.25rem;
+}
+
+.services__card {
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+
+.theme__light .services__card {
+  background-color: #ffffff;
+}
+
+.theme__dark .services__card {
+  background-color: #002447;
+}
+
+.services__icon {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.theme__light .services__icon {
+  border-color: #0057ad;
+}
+
+.theme__dark .services__icon {
+  border-color: #a3d1ff;
+}
+
+.services__icon i {
+  font-size: 1.5rem;
+}
+
+.theme__light .services__icon i {
+  color: #0057ad;
+}
+
+.theme__dark .services__icon i {
+  color: #a3d1ff;
+}
+
+.color-primary {
+  color: #0080FF;
 }
 
 .carousel {
@@ -1077,6 +964,114 @@
 
 .theme__dark .teach-with-us__partner {
   background-color: #00050a;
+}
+
+.theme__light .advantages {
+  background-color: #ffffff;
+}
+
+.theme__dark .advantages {
+  background-color: #002447;
+}
+
+.advantage {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.theme__light .advantage {
+  color: #000000;
+}
+
+.theme__dark .advantage {
+  color: #ffffff;
+}
+
+.advantage__cards {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 3rem;
+}
+
+.advantage__illustration img {
+  width: 100%;
+  height: 100%;
+}
+
+.advantage__heading {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.advantage__explanation {
+  font-size: 1rem;
+}
+
+.theme__light .features {
+  background-color: #ffffff;
+}
+
+.theme__dark .features {
+  background-color: #002447;
+}
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.theme__light .feature {
+  background-color: #ebf5ff;
+  color: #000000;
+}
+
+.theme__dark .feature {
+  background-color: #001429;
+  color: #ffffff;
+}
+
+.feature__icon {
+  min-width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.375rem;
+}
+
+.theme__light .feature__icon {
+  color: #0057ad;
+}
+
+.theme__dark .feature__icon {
+  color: #a3d1ff;
+}
+
+.feature__icon i {
+  font-size: 1.25rem;
+}
+
+.feature__heading {
+  font-size: 1.25rem;
+}
+
+.feature__description {
+  font-size: 1rem;
+  margin-top: 0.75rem;
 }
 
 .theme__light .members {
@@ -1432,12 +1427,12 @@
   .content-container {
     max-width: 90rem;
     margin: 0 auto;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
-  .hero__wrapper,
-  .about-us__wrapper,
-  .school-student__wrapper {
+  .hero__content,
+  .about-us__content,
+  .school-student__content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1465,26 +1460,44 @@
   .school-student__illustration img {
     width: 84%;
   }
+  .about-us__text,
+  .school-student__text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about-us__illustration,
+  .school-student__illustration {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .hero__heading {
     font-size: 3rem;
   }
   .hero__sub-heading {
     font-size: 2.5rem;
   }
-  .services__content {
+  .stem__content {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
     grid-column-gap: 6rem;
   }
+  .stem__heading {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .stem__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 3rem;
+  }
   .services__description {
     text-align: start;
-  }
-  .services__heading {
-    font-size: 2rem;
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
   }
   .services__offered {
     display: -ms-grid;
@@ -1493,17 +1506,6 @@
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     grid-column-gap: 6rem;
     grid-row-gap: 3rem;
-  }
-  .service {
-    padding: 2.25rem;
-  }
-  .advantage__cards {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2rem;
-  }
-  .advantage__illustration {
-    height: 8rem;
   }
   .testimony {
     padding: 2.25rem;
@@ -1514,21 +1516,6 @@
     -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-gap: 4rem;
-  }
-  .features__list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-column-gap: 6rem;
-  }
-  .feature {
-    padding: 2.25rem;
-  }
-  .stem__cards {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
   }
   .teach-with-us__content {
     -webkit-box-orient: horizontal;
@@ -1547,17 +1534,23 @@
   .teach-with-us__description {
     padding-right: 3rem;
   }
-  .about-us__text,
-  .school-student__text {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  .advantage__cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
   }
-  .about-us__illustration,
-  .school-student__illustration {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .advantage__illustration {
+    height: 8rem;
+  }
+  .features__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6rem;
+  }
+  .feature {
+    padding: 2.25rem;
   }
   .footer__wrapper {
     -ms-grid-columns: 1fr 1fr 1fr;
