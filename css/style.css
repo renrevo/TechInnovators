@@ -841,6 +841,11 @@
   padding: 1.5rem;
   border-radius: 2rem;
   border-top-left-radius: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  grid-gap: 0.75rem;
 }
 
 .theme__light .testimony {

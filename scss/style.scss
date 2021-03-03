@@ -638,6 +638,9 @@
     padding: $padding * 2;
     border-radius: $border-radius-large;
     border-top-left-radius: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-gap: $margin;
 
     @include themify($themes) {
         background-color: themed('backgroundColorPrimary');
