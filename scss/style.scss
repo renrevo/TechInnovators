@@ -397,16 +397,28 @@
 
 }
 
+.register {
+    margin-top: $margin * 2;
+    margin-bottom: $margin * 2;
+
+    &__links {
+        display: grid;
+        grid-gap: $margin;
+    }
+
+}
+
 .anchor {
 
-    &__enroll {
-        display: inline-block;
+    &__webinar {
+        @include button-bordered;
+    }
+
+    &__trial {
         @include button-colored;
-        margin: $margin * 2 auto;
     }
 
     &__careers {
-        display: inline-block;
         @include button-bordered;
         margin-top: $margin * 2;
     }
@@ -1221,6 +1233,22 @@
 
         &:after {
             transform: scaleX(1);
+        }
+
+    }
+
+    .register {
+
+        &__links {
+            display: flex;
+        }
+
+    }
+
+    .anchor {
+
+        &__careers {
+            width: fit-content;
         }
 
     }
